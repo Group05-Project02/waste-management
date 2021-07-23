@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Wasteaway</title>
+    <title>WasteAway</title>
     <script src="handlebars-v4.7.7.js"></script>
 </head>
 
 <body>
+
+<div id="heroData"></div>
+
+<script type="text/javascript">
+
+var myInfo = "<p>{{handlebarsinfo}}</p>";
+
+var template = Handlebars.compile(myInfo);
+
+var data = template({handlebarsinfo: "Know what's happening at a glance with inventory management software that does the work for you - right in WasteAway Enterprise."});
+
+document.getElementById("heroData").innerHTML += data;
+
+</script>
 
 
 </body>
