@@ -1,26 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="no-js">
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WasteAway</title>
-    <script src="handlebars-v4.7.7.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.css">
 </head>
+<body class="contains-boxed has-image">
+    <div class="body-wrap">
+        <header class="page-header">
+            <div class="container">
+                <div class="page-header-inner">
+                    <div class="name header-name">
+                        <h1 class="m-0">
+							<a href="#">
+								<img class="header-logo" src="INSERT IMAGE" alt="Logo">
+                            </a>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </header>
 
-<body>
+        <main>
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-inner">
+						<div class="hero-copy">
+	                        <h1 class="hero-title mt-0">Waste Management</h1>
+	                        <p class="hero-paragraph">Know what's happening at a glance with inventory management software that does the work for you - right in WasteAway Enterprise.</p>
+	                        <div class="hero-cta"><a class="button button-primary" ></a><a class="button" href="#">Sign Up</a></div>
+						</div>
 
-<div id="heroData"></div>
-
-<script type="text/javascript">
-
-var myInfo = "<p>{{handlebarsinfo}}</p>";
-
-var template = Handlebars.compile(myInfo);
-
-var data = template({handlebarsinfo: "Know what's happening at a glance with inventory management software that does the work for you - right in WasteAway Enterprise."});
-
-document.getElementById("heroData").innerHTML += data;
-
-</script>
-
-
+           
 </body>
 </html>
