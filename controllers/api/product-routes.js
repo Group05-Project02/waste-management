@@ -4,7 +4,7 @@ const { Product, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.get('/:id', (req, res) => {
-    Post.findOne({
+    Product.findOne({
       where: {
         id: req.params.id
       },
@@ -22,12 +22,12 @@ router.get('/:id', (req, res) => {
     }
 ]
     })
-    .then(dbPostData => {
-        if (!dbPostData) {
+    .then(dbProductData => {
+        if (!dbProductData) {
           res.status(404).json({ message: 'No products found with this id' });
           return;
         }
-        res.json(dbPostData);
+        res.json(dbProductData);
       })
       .catch(err => {
         console.log(err);
@@ -35,5 +35,17 @@ router.get('/:id', (req, res) => {
       });
   });
 
- // router.post('/', withAuth, (req, res) => {
-  //  Post.create({
+  router.post('/', withAuth, (req, res) => {
+    Product.create({
+        name: req.body.name,
+        price: req.body.price,
+        quantity: req.body.quantity,
+        consumption: req.body.consumption,
+        user_id: req.session.user_id
+    })
+    .then(dbProductData => res.json(dbProductData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
