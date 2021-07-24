@@ -1,8 +1,7 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { Product, User } = require('../../models');
-
-
+const withAuth = require('../../utils/auth');
 
 router.get('/:id', (req, res) => {
     Post.findOne({
@@ -35,3 +34,6 @@ router.get('/:id', (req, res) => {
         res.status(500).json(err);
       });
   });
+
+ // router.post('/', withAuth, (req, res) => {
+  //  Post.create({
