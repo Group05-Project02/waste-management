@@ -1,13 +1,12 @@
 // import model and sequelize db connection
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const bcrypt = require('bcrypt');
 
 // create our User model
-class User extends Model {}
+class Products extends Model {}
 
 // define table columns and configuration
-User.init(
+Products.init(
   {
     id: {
         // use the special Sequelize DataTypes object provide what type of data it is
@@ -24,33 +23,40 @@ User.init(
         type: DataTypes.STRING,
         allowNull: false
       },
-      // define an email column
-      email: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        // there cannot be any duplicate email values in this table
-        unique: true,
-        // if allowNull is set to false, we can run our data through validators before creating the table data
-        validate: {
-          isEmail: true
-        }
+      // define an price column
+      price: {
+        type: DataTypes.INTEGER,
+        allowNull: false
       },
-      // define a password column
-      password: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          // this means the password must be at least four characters long
-          len: [6]
+      // define a quantity column
+      quantity: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      },
+      // define a consumption column
+      consumption: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      },
+      user_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'user',
+          key: 'id'
         }
       }
   },
   {
     hooks: {
-    // set up beforeCreate lifecycle "hook" functionality
+      // set up beforeCreate lifecycle "hook" functionality
       async beforeCreate(newUserData) {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
+      },
+      // set up beforeUpdate lifecycle "hook" functionality
+      async beforeUpdate(updatedUserData) {
+        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+        return updatedUserData;
       }
     },
     // pass in our imported sequelize connection (the direct connection to our database)
@@ -62,9 +68,9 @@ User.init(
     // use underscores instead of camel-casing (i.e. `comment_text` and not `commentText`)
     underscored: true,
     // make it so our model name stays lowercase in the database
-    modelName: 'user'
+    modelName: 'product'
   }
 );
 
 // export user model
-module.exports = User;
+module.exports = Products;
