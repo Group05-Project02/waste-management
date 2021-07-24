@@ -139,8 +139,7 @@ opacity: 0.98;
     height: 100%;
 }
 
-.feature-title
-
+.feature-title,
 .feature-icon {
 	display: flex;
     justify-content: center;
@@ -178,3 +177,4 @@ opacity: 0.98;
     margin-bottom: 24px;
     margin-left: 500px;
 }
+    }
