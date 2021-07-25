@@ -78,26 +78,17 @@ button {
     border: #333 2px solid;
 }
 
-/*---------- Navbar ------------*/
-/* Smart scrolling */
-.smart-scroll {
-    position: fixed;
-    top: 0;
-    z-index: 2;
+/*--------------- NAVIGATION ---------------*/
+
+.header {
     width: 100%;
-    transition: all .3s ease-out;
-    transform: translateY(-100%);
-    background-color: white;
-    transform: translateY(0);
-    transition: all .3s ease-out;
+    height: 100px;
 }
 
 .logo {
     font-family: 'Oswald', sans-serif;
     float: left;
-    padding-left: 5%;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
+    padding: 1.5em 0 1.5em 5%;
 }
 
 .navbar-brand {
@@ -134,17 +125,23 @@ button {
     color: black;
 }
 
-/*---------------- Header Stuck ----------------*/
+/*---------------- HEADER STUCK ----------------*/
 
-.navbar-stuck {
+.header-stuck {
     background-color: white;
-    height: fit-content;
-    padding: 2vh 0 2vh 0;
     background-position: center;
     background-repeat: no-repeat;
+
+    height: 100px;
+    width: 100%;
+    
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 5;
-    box-shadow: 0px 0px 3px 0.1px #939597;
+    padding-bottom: 10px;
+
+    box-shadow: 0px 0px 3px 0.1px #B1B1B1;
     animation: fadein;
     animation-duration: 0.3s;
 }
@@ -159,13 +156,6 @@ button {
     }
 }
 
-.navbar-stuck li a {
-    color: black;
-}
-
-.navbar-stuck a:hover {
-    color: black;
-}
 
 /*--------------- MOBILE MENU ---------------*/
 .hamburger-menu {display: none;}
@@ -307,7 +297,7 @@ button {
     .hamburger-menu {display: block}
 }
 
-/*------- hero section ---------*/
+/*--------------- HER0 SECTION ---------------*/
 main {
     margin-top: 10vh;
     flex: 1 0 auto;
@@ -318,7 +308,6 @@ main {
 	display: flex;
     flex-direction: row;
     width: 100%;
-    padding-top: 10vh;
     overflow: hidden;
 }
 
@@ -355,7 +344,7 @@ main {
     }
 }
 
-/*------- Feature --------*/
+/*--------------- FEATURE ---------------*/
 .feature {
     width: 100%;
     margin-top: 10vh;
@@ -415,7 +404,7 @@ main {
     }
 
 }
-/*---------- Footer -----------*/
+/*--------------- FOOTER ---------------*/
 footer {
     width: 100%;
 }
