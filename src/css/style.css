@@ -116,12 +116,6 @@ button {
 .navbar {
     opacity: 0.98;
 }
-    
-@media (max-width: 992px) {
-    .navbar-transparent {
-        background-color: rgba(black, 0.4);
-    }
-}
 
 .navbar-nav { 
     float: right;
@@ -138,6 +132,179 @@ button {
     position: relative; 
     padding: 0.75em 1em;
     color: black;
+}
+
+/*---------------- Header Stuck ----------------*/
+
+.navbar-stuck {
+    background-color: white;
+    height: fit-content;
+    padding: 2vh 0 2vh 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: 5;
+    box-shadow: 0px 0px 3px 0.1px #939597;
+    animation: fadein;
+    animation-duration: 0.3s;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+.navbar-stuck li a {
+    color: black;
+}
+
+.navbar-stuck a:hover {
+    color: black;
+}
+
+/*--------------- MOBILE MENU ---------------*/
+.hamburger-menu {display: none;}
+
+#menu__toggle {
+    opacity: 0;
+}
+  
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+    background-color: black;
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+    background-color: black;
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+    background-color: black;
+}
+
+#menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    right: 0;
+}
+
+.menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 26px;
+    height: 26px;
+
+    cursor: pointer;
+    z-index: 2;
+}
+  
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
+    position: absolute;
+  
+    width: 100%;
+    height: 2px;
+  
+    background-color: #333;
+  
+    transition-duration: .25s;
+}
+
+.menu__btn > span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu__btn > span::after {
+    content: '';
+    top: 8px;
+}
+
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: visible;
+    top: 0;
+    right: -100%;
+  
+    width: 200px;
+    height: 100%;
+  
+    margin: 0;
+    padding: 80px 0;
+    z-index: 1;
+  
+    list-style: none;
+  
+    background-color: white;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  
+    transition-duration: .25s;
+}
+
+.menu__box li a {
+    color: black;
+    font-size: 1em;
+	text-decoration: none;
+	text-transform: none;
+	display:block;
+    position: relative;
+}
+
+.menu__box li {
+	text-align: end;
+	list-style: none;
+    margin: 0 30px 10px 30px;
+
+}
+
+/*--------------- X HAMBURGER MENU ---------------*/
+
+.menu__btn-black > span,
+.menu__btn-black > span::before,
+.menu__btn-black > span::after {
+    display: block;
+    position: absolute;
+  
+    width: 100%;
+    height: 2px;
+  
+    background-color: #333;
+  
+    transition-duration: .25s;
+}
+
+.menu__btn-black > span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu__btn-black > span::after {
+    content: '';
+    top: 8px;
+}
+
+.menu__box li a:hover {
+    color: #248277;
+}
+
+@media (max-width:980px) {
+    .navbar-nav {display: none;}
+    .navbar-stuck {display:none;}
+    .hamburger-menu {display: block}
 }
 
 /*------- hero section ---------*/
@@ -213,24 +380,41 @@ main {
     width: calc(300px + 2vw);
     height: calc(400px + 1vh);
     min-width: 200px;
-    min-height: 300px;
 
     background-color: white;
-    padding: 5vh 3vw;
+    padding: 10vh 3vw;
     border-radius: 20px;
     -webkit-box-shadow: 4px 4px 10px 0px #B1B1B1; 
     box-shadow: 4px 4px 10px 0px #B1B1B1;
 }
-   
+
 .feature-card:not(:first-child) {
     margin-left: 5vh;
 }
 
 .feature-card img {
-    min-width: 100px;
+    width: 15vh;
     margin: 2vh 0;
 }
 
+@media (max-width: 1200px) {
+    .feature-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .feature-card {
+        width: 60%;
+        padding: 2vh;
+    }
+
+    .feature-card:not(:first-child) {
+        margin-left: 0;
+        margin-top: 5vh;
+    }
+
+}
 /*---------- Footer -----------*/
 footer {
     width: 100%;
