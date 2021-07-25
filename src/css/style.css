@@ -109,7 +109,7 @@ button {
     letter-spacing: 0.15em;
 }
 
-.navbar-brand-img {
+.logo img {
     height: calc(30px + 2vh);
 }
 
@@ -210,8 +210,8 @@ main {
     align-items: center;
     text-align: center;
 
-    width: calc(300px + 3vw);
-    height: calc(400px + 2vh);
+    width: calc(300px + 2vw);
+    height: calc(400px + 1vh);
     min-width: 200px;
     min-height: 300px;
 
@@ -226,29 +226,31 @@ main {
     margin-left: 5vh;
 }
 
-/* Footer */
-.page-footer-center {
-    position: relative; 
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 30px;
-    padding-bottom: 10px;
-    justify-content: space-between;
-    padding-top: 64px;
-    padding-bottom: 64px;
-    flex: 50%;
+.feature-card img {
+    min-width: 100px;
+    margin: 2vh 0;
 }
 
-.footer-copyright {
-    flex: none;
+/*---------- Footer -----------*/
+footer {
     width: 100%;
-    display: inline-flex;
-    justify-content: right;
-    justify-content: flex-start;
-    margin-left: 500px;
 }
 
-.footer-brand {
-    margin-bottom: 24px;
-    margin-left: 500px;
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
 }
+
+.copyright {
+    width: 100%;
+}
+
+footer p {
+    font-size: 0.6em;
+    text-align: end;
+    margin-top: -5px;
+}
+
+
