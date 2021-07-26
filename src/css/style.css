@@ -26,22 +26,26 @@ p {
     line-height: 1.5em;
 }
 
-a {
+.nav-link, 
+.navbar-brand {
     text-decoration: none;
     color: black;
     display: inline-block;
     position: relative;
 }
 
-a:hover {
+.nav-link:hover, 
+.navbar-brand:hover {
      color: #248277;
 } 
 
-a:active, a:focus {
+a:active, 
+a:focus {
     outline: none;
 }
 
-button {
+button, 
+input#submit {
     cursor: pointer;
     border-radius: 10px;
     color: white;
@@ -51,7 +55,8 @@ button {
     padding: 0;
 }
 
-.button-primary {
+.button-primary, 
+input#submit {
     width: 230px;
     height: 50px;
     background-color: #248277;
@@ -59,7 +64,8 @@ button {
     text-transform: uppercase;
 }
 
-.button-primary:hover {
+.button-primary:hover,
+input#submit:hover {
     background-color: white;
     color: #333;
 }
@@ -296,6 +302,238 @@ button {
     .navbar-stuck {display:none;}
     .hamburger-menu {display: block}
 }
+
+/*------------ SIGNUP/SIGNIN MODAL ------------*/
+.overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease;
+}
+  
+.overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+  
+.main-popup {
+    position: fixed;
+    left: 0;
+    top: 15%;
+    margin: 0;
+    width: 100%;
+    height: calc(500px + 10vh);
+    background-color: white;
+    border-radius: 10px;
+    z-index: 15;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all .5s ease;
+}
+  
+.main-popup.visible {
+    visibility: visible;
+    transform: translateY(10px);
+    transition: all .5s ease;
+}
+  
+@media (min-width: 500px) {
+    .main-popup {
+      width: 500px;
+      left: 50%;
+      margin: 0 0 0 -250px;
+    }
+}
+  
+.popup-header {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 50px;
+    width: 100%;
+}
+  
+#popup-close-button a {
+    position: absolute;
+    right: 10px;
+    top: -30px;
+    width: 22px;
+    height: 22px;
+}
+  
+#popup-close-button a::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 3px;
+    height: 25px;
+    background-color: white;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+  
+#popup-close-button a::after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 0;
+    width: 3px;
+    height: 25px;
+    background-color: white;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+  
+.popup-header ul {
+    margin: 0;
+    padding: 0;
+}
+  
+.popup-header ul li {
+    text-align: center;
+    list-style: none;
+    width: 50%;
+    float: left;
+}
+  
+.popup-header ul li a {
+    display: block;
+    padding: 20px 0;
+    margin: 0;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+  
+#sign-in {
+    background-color: white;
+    color: #333;
+    border-radius: 10px 0 0 0;
+}
+  
+#register {
+    background-color: white;
+    color: #333;
+    border-radius: 0 10px 0 0;
+}
+
+#sign-in.active,
+#register.active {
+    color: #248277;
+    font-weight: 700;
+    background-color: white;
+    border-bottom: #248277 3px solid;
+}
+
+.popup-content {
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+  
+form.sign-in {
+    position: relative; 
+    left: 0;
+    top: 80px;
+    font-size: 1em;
+    opacity: 1;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    -o-transition: all .35s;
+    transition: all .35s;
+}
+  
+form.sign-in.move-left {
+    opacity: 0;
+    transform: translateX(-450px);
+}
+
+form.register {
+    position: relative; 
+    top: -290px;
+    left: 0;
+    font-size: 1em;
+    opacity: 0;
+    transform: translateX(450px);
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    -o-transition: all .35s;
+    transition: all .35s;
+}
+
+form.register.move-left {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+form label {
+    font-size: 1em;
+    color: #333;
+    margin-left: 23px;
+}
+  
+form.sign-in input, form.register input {
+    border-radius: 10px;
+    background-color: rgba(233, 233, 233, 0.795);
+    width: 80%;
+    height: 10px;
+    margin: 5px 5% 30px 5%;
+    padding: 20px;
+    font-size: 1em;
+    color: #333;
+    outline: none;
+    border: none;
+}
+  
+input#submit {
+    height: 50px;
+    width: 90%;
+    margin: 25px 5%;
+    padding: 0;
+    outline: none;
+}
+  
+p.check-mark {
+    position: relative;
+    left: 50%;
+    width: 200px;
+    margin: 0 0 0 -100px;
+    padding: 0;
+    text-align: center;
+    cursor: pointer;
+}
+  
+p.check-mark a {
+    color: #248277;
+}
+  
+p.check-mark input {
+    border-radius: 2px;
+    height: 0.8em;
+    width: 0.8em;
+    background-color: rgba(233, 233, 233, 0.795);
+    
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+}
+
+p.check-mark label {
+    margin-left: 5px;
+}
+
 
 /*--------------- HER0 SECTION ---------------*/
 main {
