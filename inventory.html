@@ -45,8 +45,8 @@
    </main>
    <script>
    $(document).ready( function() {
-   var templateSource = $("#details-template").html();
-   var template = Handlebars.compile(templateSource);
+   var inventory = $("#inventory").html();
+   var inventory = Handlebars.compile(templateSource);
        $('#createButton').click(function(){
                $("#detailsBox").html(template({"itemValue":$('#itemInput').val(), "qtyValue":$('#qtyInput').val(), "costValue":$('#costInput').val()}));
        });
