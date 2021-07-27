@@ -1,13 +1,7 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Product } = require('../../models');
 
-<<<<<<< HEAD
-// GET /api/users
 router.get('/', (req, res) => {
-  // Access our User model and run .findAll() method)
-=======
-router.get('/', (req, res) => {
->>>>>>> 8132249d2737172331ff135baa796765d47d0a1b
   User.findAll({
     attributes: { exclude: ['password'] }
   })
@@ -20,11 +14,6 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
   User.findOne({
-<<<<<<< HEAD
-    where: {
-      id: req.params.id
-    }
-=======
     attributes: { exclude: ['password'] },
     where: {
       id: req.params.id
@@ -35,7 +24,6 @@ router.get('/:id', (req, res) => {
         attributes: ['id', 'name', 'price', 'quantity', 'consumption', 'created_at']
       },
     ]
->>>>>>> 8132249d2737172331ff135baa796765d47d0a1b
   })
     .then(dbUserData => {
       if (!dbUserData) {
@@ -58,18 +46,10 @@ router.post('/', (req, res) => {
       password: req.body.password
     })
       .then(dbUserData => {
-<<<<<<< HEAD
-        // req.session.save(() => {
-        //   req.session.name = dbUserData.name;
-        //   req.session.user_id = dbUserData.id;
-        //   req.session.username = dbUserData.username;
-        //   req.session.loggedIn = true;
-=======
         req.session.save(() => {
           req.session.user_id = dbUserData.id;
           req.session.name = dbUserData.name;
           req.session.loggedIn = true;
->>>>>>> 8132249d2737172331ff135baa796765d47d0a1b
     
           res.json(dbUserData);
         // });
