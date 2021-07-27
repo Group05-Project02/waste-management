@@ -1,94 +1,70 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <script src="handlebars-v4.7.7.js"></script>
-    
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" type="text/css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" 
-    href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" 
-    integrity="sha384B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" 
-    crossorigin="anonymous">
-    <link rel="stylesheet" href="src/css/dashboard.css">
-</head>
-<body>
-    <!--wrapper start-->
-    <div class="wrapper">
-        <!--header start-->
-        <div class="header">
-            <div class="header-menu">
-                <div class="title">Waste Management</div>
-                <div class="sidebar-btn">
-                    <i class="fas fa-bars"></i>
-                </div>
-        <!--header menu end-->
-        <!--sidebar start-->
-        <div class="sidebar">
-            <div class="sidebar-menu">
-                <center class="Inventory">
-                    <img src="" alt="">
-                    <p>Inventory</p>
-                </center>
-                <li class="item">
-                    <a href="#" class="menu-btn">
-                        <i class="fas fa-desktop"></i><span>Dashboard</span>
-                    </a>
-                      <div class="main-container">
-                </li>
-                <li class="item" id="inventory-overview">
-                    <a href="#inventory-overview" class="menu-btn">
-                        <i class="fas fa-cog"></i><span>Inventory Overview <i class="fas fa-chevron-down drop-down"></i></span>
-                    </a>
-                    <div class="sub-menu">
-                        <a href="#"><i class="fas fa-overview-card"></i><span>Info</span></a>
-                    </div>
-                </li>
-                <li class="item" id="inventory-management">
-                    <a href="#inventory-management" class="menu-btn">
-                        <i class="fas fa-user-circle"></i><span>Inventory Management<i class="fas fa-chevron-down drop-down"></i></span>
-                    </a>
-                    <div class="sub-menu">
-                        <a href="#"><i class="fas fa-overview-card"></i><span>Add Products</span></a>
-                        <a href="#"><i class="fas fa-overview-card"></i><span>View Previous Product Orders</span></a>
-                    </div>
-                </li>
-                <li class="item" id="orders-recieved">
-                    <a href="#orders-recieved" class="menu-btn">
-                        <i class="fas fa-cog"></i><span>New Orders<i class="fas fa-chevron-down drop-down"></i></span>
-                    </a>
-                    <div class="sub-menu">
-                        <a href="#"><i class="fas fa-overview-card"></i><span>New Producta</span></a>
-                        <a href="#"><i class="fas fa-overview-card"></i><span>All Products</span></a>
-                    </div>
-                </li>
-            </div>
-        </div>
-        <!--sidebar end-->
-        <!--main container start-->
-        <div class="main-container">
-            <div class="card">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-            </div>
-            <div class="card">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-            </div>
-            <div class="card">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-            </div>
-        </div>
-        <!--main container end-->
+<section class="hero is-medium is-dark is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Dashboard
+        </h1>
+        <h2 class="subtitle">
+          WasteAway
+        </h2>
+      </div>
     </div>
-    <!--wrapper end-->
-    <script type="text/javascript">
-    $(document).ready(function(){
-        $(".sidebar-btn").click(function(){
-            $(".wrapper").toggleClass("collapse");
-        });
-    });
-    
-    </script>
-</body>
-</html>
+  </section>
+
+  <br>
+
+  <div class="columns">
+    <div class="column">
+      <div class="card">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+            </div>
+            <div class="media-content">
+              <p class="title is-4">Inventory Overview</p>
+            </div>
+          </div>
+
+          <div class="content">
+            <a href="/overview"><button class="button is-dark is-centered" id="inventory-overview">Go!</button></a> 
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+            </div>
+            <div class="media-content">
+              <p class="title is-4">Inventory Management</p>
+            </div>
+          </div>
+
+          <div class="content">
+            <a href="/management"><button class="button is-dark" id="inventory-management">Go!</button> </a>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+            </div>
+            <div class="media-content">
+              <p class="title is-4">Orders</p>
+            </div>
+          </div>
+
+          <div class="content">
+            <a href="/orders"><button class="button is-dark" id="orders">Go!</button></a>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
