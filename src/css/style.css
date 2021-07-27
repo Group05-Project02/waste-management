@@ -330,7 +330,7 @@ input#submit:hover {
     width: 100%;
     height: calc(500px + 10vh);
     background-color: white;
-    border-radius: 10px;
+    border-radius: 20px;
     z-index: 15;
     visibility: hidden;
     transform: translateY(-20px);
@@ -420,13 +420,13 @@ input#submit:hover {
 #sign-in {
     background-color: white;
     color: #333;
-    border-radius: 10px 0 0 0;
+    border-radius: 20px 0 0 0;
 }
   
 #register {
     background-color: white;
     color: #333;
-    border-radius: 0 10px 0 0;
+    border-radius: 0 20px 0 0;
 }
 
 #sign-in.active,

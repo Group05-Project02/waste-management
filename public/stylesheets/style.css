@@ -139,7 +139,10 @@ opacity: 0.98;
     height: 100%;
 }
 
+<<<<<<< HEAD:style.css
+=======
 .feature-title,
+>>>>>>> df3be62f23f6ca83b5a75e41d816ffc460b341e7:public/stylesheets/style.css
 .feature-icon {
 	display: flex;
     justify-content: center;
@@ -177,4 +180,10 @@ opacity: 0.98;
     margin-bottom: 24px;
     margin-left: 500px;
 }
+<<<<<<< HEAD:style.css
+
+
+
+=======
     }
+>>>>>>> df3be62f23f6ca83b5a75e41d816ffc460b341e7:public/stylesheets/style.css
