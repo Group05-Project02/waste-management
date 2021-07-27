@@ -2,18 +2,16 @@ const router = require('express').Router();
 const { User } = require('../../models');
 
 router.post('/', (req, res) => {
-    // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
+    // expects {name: 'lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
     User.create({
       name: req.body.name,
-      username: req.body.username,
       email: req.body.email,
       password: req.body.password
     })
       .then(dbUserData => {
         req.session.save(() => {
-          req.session.name = dbUserData.name;
           req.session.user_id = dbUserData.id;
-          req.session.username = dbUserData.username;
+          req.session.name = dbUserData.name;
           req.session.loggedIn = true;
     
           res.json(dbUserData);
@@ -48,7 +46,7 @@ router.post('/', (req, res) => {
   
       req.session.save(() => {
         req.session.user_id = dbUserData.id;
-        req.session.username = dbUserData.username;
+        req.session.name = dbUserData.name;
         req.session.loggedIn = true;
     
         res.json({ user: dbUserData, message: 'You are now logged in!' });
