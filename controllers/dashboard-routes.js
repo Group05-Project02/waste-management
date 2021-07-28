@@ -1,36 +1,21 @@
 const router = require('express').Router();
+const { response } = require('express');
 const { Product, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 // get all posts for dashboard
 router.get('/', withAuth, (req, res) => {
+
     console.log(req.session);
     console.log('======================');
     Product.findAll({
       where: {
         user_id: req.session.user_id
       }
-      // attributes: [
-      //   'id',
-      //   'name',
-      //   'price',
-      //   'quantity',
-      //   'consumption',
-      //   'created_at'
-      // ],
-      // include: [
-        
-      //   {
-      //     model: User,
-      //     attributes: ['name']
-      //   }
-      // ]
     })
       .then(dbProductData => {
-        // const products = dbProductData.map(post => post.get({ plain: true }));
-        // res.render('dashboard', { products, loggedIn: true });
-        
-        res.render('dashboard');
+        const products = dbProductData.map(post => post.get({ plain: true }));
+        res.render('dashboard', {products});
       })
       .catch(err => {
         console.log(err);

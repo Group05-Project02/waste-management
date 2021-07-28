@@ -24,12 +24,13 @@ router.get('/login', (req, res) => {
 
   
   router.get('/add', (req, res) => {
+    console.log("in add route");
     if (req.session.loggedIn) {
-      res.redirect('/');
+    res.render('inventory');
       return;
     }
   
-    res.render('inventory');
+    res.redirect('/');
   })
   
   module.exports = router;

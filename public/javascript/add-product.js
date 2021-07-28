@@ -18,13 +18,13 @@ async function newProductHandler(event) {
         'Content-Type': 'application/json'
       }
     });
-    console.log(response);
   
-    // if (response.ok) {
-    //   document.location.replace('/dashboard');
-    // } else {
-    //   alert(response.statusText);
-    // }
+    if (response.ok) {
+      alert("Product added");
+      document.location.replace('/dashboard');
+    } else {
+      alert(response.statusText);
+    }
   }
   
   document.querySelector('#submitButton').addEventListener('click', newProductHandler);

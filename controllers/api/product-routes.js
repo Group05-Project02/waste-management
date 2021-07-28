@@ -63,7 +63,6 @@ router.post('/', withAuth, (req, res) => {
         quantity: req.body.quantity,
         consumption: req.body.consumption,
         user_id: req.session.user_id
-        // user_id: req.session.user_id
     })
     .then(dbProductData => res.json(dbProductData))
     .catch(err => {

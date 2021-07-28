@@ -33,7 +33,7 @@
                         <i class="fas fa-user-circle"></i><span>Inventory Management<i class="fas fa-chevron-down drop-down"></i></span>
                     </a>
                     <div class="sub-menu">
-                        <a href="/api/products"><i class="fas fa-overview-card"></i><span>Add Products</span></a>
+                        <a href="/add"><i class="fas fa-overview-card"></i><span>Add Products</span></a>
                     </div>
                 </li>
                 <li class="item" id="orders-recieved">
@@ -62,6 +62,7 @@
         </div>
         <!--main container end-->
     </div>
+{{> products products}}
     <!--wrapper end-->
     <script type="text/javascript">
     $(document).ready(function(){
