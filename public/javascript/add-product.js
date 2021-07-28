@@ -1,25 +1,24 @@
 async function newProductHandler(event) {
     event.preventDefault();
-    
-    alert("response");
-  
-    // const name = document.querySelector('input[name="itemInput"]').value;
-    // const price = document.querySelector('input[name="costInput"]').value;
-    // const quantity = document.querySelector('input[name="qtyInput"]').value;
-    // const consumption = document.querySelector('input[name="consumptionInput"]').value;
 
-    // const response = await fetch(`/api/products`, {
-    //   method: 'POST',
-    //   body: JSON.stringify({
-    //     name,
-    //     price,
-    //     quantity,
-    //     consumption,
-    //   }),
-    //   headers: {
-    //     'Content-Type': 'application/json'
-    //   }
-    // });
+    const name = document.querySelector("#itemInput").value;
+    const price = document.querySelector("#costInput").value;
+    const quantity = document.querySelector("#qtyInput").value;
+    const consumption = document.querySelector("#consumptionInput").value;
+
+    const response = await fetch(`/api/products`, {
+      method: 'POST',
+      body: JSON.stringify({
+        name,
+        price,
+        quantity,
+        consumption,
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    console.log(response);
   
     // if (response.ok) {
     //   document.location.replace('/dashboard');

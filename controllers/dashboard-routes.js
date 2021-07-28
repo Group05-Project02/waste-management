@@ -9,26 +9,28 @@ router.get('/', withAuth, (req, res) => {
     Product.findAll({
       where: {
         user_id: req.session.user_id
-      },
-      attributes: [
-        'id',
-        'name',
-        'price',
-        'quantity',
-        'consumption',
-        'created_at'
-      ],
-      include: [
+      }
+      // attributes: [
+      //   'id',
+      //   'name',
+      //   'price',
+      //   'quantity',
+      //   'consumption',
+      //   'created_at'
+      // ],
+      // include: [
         
-        {
-          model: User,
-          attributes: ['name']
-        }
-      ]
+      //   {
+      //     model: User,
+      //     attributes: ['name']
+      //   }
+      // ]
     })
       .then(dbProductData => {
-        const products = dbProductData.map(post => post.get({ plain: true }));
-        res.render('dashboard', { products, loggedIn: true });
+        // const products = dbProductData.map(post => post.get({ plain: true }));
+        // res.render('dashboard', { products, loggedIn: true });
+        
+        res.render('dashboard');
       })
       .catch(err => {
         console.log(err);

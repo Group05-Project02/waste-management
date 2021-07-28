@@ -28,6 +28,9 @@
 </head>
 
 <body>
+        {{#if loggedIn}}
+        <button id="logout" class="btn-no-style">logout</button>
+        {{/if}}
     <main>
       {{{ body }}}
     </main>
@@ -45,9 +48,12 @@
     </div>
 </footer>
 
+{{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
+
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-{{!-- <script src="./javascript/script.js"></script> --}}
-<script src="./javascipt/add-product.js"></script>
+<script src="./javascript/script.js"></script>
    
 </body>
 

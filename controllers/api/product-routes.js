@@ -1,8 +1,6 @@
 const router = require('express').Router();
 const { Product, User } = require('../../models');
 const withAuth = require('../../utils/auth');
-
-// router.get('/', withAuth, (req, res => {
   
 router.get('/', (req, res) => {
   Product.findAll({
@@ -58,13 +56,13 @@ router.get('/:id', (req, res) => {
     });
 });
 
-  router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
     Product.create({
         name: req.body.name,
         price: req.body.price,
         quantity: req.body.quantity,
         consumption: req.body.consumption,
-        user_id: req.body.user_id
+        user_id: req.session.user_id
         // user_id: req.session.user_id
     })
     .then(dbProductData => res.json(dbProductData))
@@ -74,8 +72,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
-// router.put('/:id', withAuth, (req, res) => {
-router.put('/:id', (req, res) => {
+router.put('/:id',withAuth, (req, res) => {
   Product.update( req.body, {
     individualHooks: true,
       where: {
@@ -96,9 +93,8 @@ router.put('/:id', (req, res) => {
     });
 });
 
-// router.delete('/:id', withAuth, (req, res) => {
   
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth,(req, res) => {
   Product.destroy({
     where: {
       id: req.params.id
