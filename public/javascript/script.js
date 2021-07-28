@@ -88,4 +88,33 @@ async function loginFormHandler(event) {
     }
   }
   
-  document.querySelector('#submit').addEventListener('click', loginFormHandler);
+  async function signupFormHandler(event) {
+    event.preventDefault();
+
+    const name = document.querySelector('#name-register').value.trim();
+    const email = document.querySelector('#email-register').value.trim();
+    const password = document.querySelector('#password-register').value.trim();
+  
+    if (name && email && password) {
+      const response = await fetch('/api/users', {
+        method: 'post',
+        body: JSON.stringify({
+          name,
+          email,
+          password
+        }),
+        headers: { 'Content-Type': 'application/json' }
+      });
+  
+      if (response.ok) {
+        alert("User Registered successfully");
+        document.location.reload();
+      } else {
+        console.log(response);
+        alert(response.statusText);
+      }
+    }
+  }
+
+  document.querySelector('#submitSignIn').addEventListener('click', loginFormHandler);
+  document.querySelector('#submitRegister').addEventListener('click', signupFormHandler);

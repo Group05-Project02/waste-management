@@ -497,7 +497,8 @@ form.sign-in input, form.register input {
     border: none;
 }
   
-input#submit {
+input#submitRegister,
+input#submitSignIn {
     height: 50px;
     width: 90%;
     margin: 25px 5%;
