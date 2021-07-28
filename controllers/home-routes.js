@@ -1,9 +1,7 @@
 const router = require('express').Router();
 
-
-
 router.get('/', (req, res) => {
-    res.render('sample');
+    res.render('index');
   });
 
 router.get('/login', (req, res) => {
@@ -12,7 +10,7 @@ router.get('/login', (req, res) => {
       return;
     }
   
-    res.render('login');
+    res.render('index');
   });
 
   router.get('/signup', (req, res) => {
@@ -23,5 +21,15 @@ router.get('/login', (req, res) => {
   
     res.render('signup');
   });
+
+  
+  router.get('/abc', (req, res) => {
+    if (req.session.loggedIn) {
+      res.redirect('/');
+      return;
+    }
+  
+    res.render('inventory');
+  })
   
   module.exports = router;

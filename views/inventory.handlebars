@@ -1,25 +1,5 @@
-<!---
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Inventory</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&family=Secular+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/css/style.css">
-</head>
---->
-
-<!--
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script> 
-   <script src="handlebars-v4.7.7.js"></script>
-   </script>
-   --->
-   
-        <div id='mainDiv'>
+<div id='mainDiv'>
        <div id='formDiv'>
            <form id='invForm'>
                <fieldset>
@@ -37,25 +17,15 @@
                         <td><label for='costInput'>Cost</label></td>
                         <td><input type='number' id='costInput'/></td>
                     </tr>
+                    <tr>
+                        <td><label for='consumptionInput'>Cost</label></td>
+                        <td><input type='number' id='consumptionInput'/></td>
+                    </tr>
                        <tr>
-                        <li class="grey"><a href="#" class="button">+</a></li>
                         <td colspan='2'><input type='submit' id='submitButton'/></td>
                        </tr>
                    </table>
                </fieldset>
            </from>
        </div>
-       <div id='detailsBox'></div>
-   </div>
-   </main>
-   <script>
-   $(document).ready( function() {
-   var inventory = $("#inventory").html();
-   var inventory = Handlebars.compile(templateSource);
-       $('#createButton').click(function(){
-               $("#detailsBox").html(template({"itemValue":$('#itemInput').val(), "qtyValue":$('#qtyInput').val(), "costValue":$('#costInput').val()}));
-       });
-   });
-   </script>
-</body>
-</html>
+ 
