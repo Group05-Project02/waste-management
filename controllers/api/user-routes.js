@@ -84,6 +84,7 @@ router.post('/', (req, res) => {
         req.session.name = dbUserData.name;
         req.session.loggedIn = true;
     
+        res.redirect('/dashboard');
         res.json({ user: dbUserData, message: 'You are now logged in!' });
       });
     });
