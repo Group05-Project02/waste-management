@@ -81,7 +81,7 @@ async function loginFormHandler(event) {
       });
   
       if (response.ok) {
-        document.location.replace('/dashboard/');
+        document.location.replace('/dashboard');
       } else {
         alert(response.statusText);
       }
@@ -116,5 +116,18 @@ async function loginFormHandler(event) {
     }
   }
 
-  document.querySelector('#submitSignIn').addEventListener('click', loginFormHandler);
-  document.querySelector('#submitRegister').addEventListener('click', signupFormHandler);
+  async function logoutHandler() {
+    const response = await fetch('/api/users/logout', {
+      method: 'post',
+      headers: { 'Content-Type': 'application/json' }
+    });
+    if (response.ok) {
+      document.location.replace('/');
+    } else {
+      alert(response.statusText);
+    }
+  }
+
+  $('#logout').on('click',logoutHandler);
+  $('#submitSignIn').on('click',loginFormHandler);
+  $('#submitRegister').on('click',signupFormHandler);

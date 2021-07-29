@@ -1,3 +1,4 @@
+
     <div class="wrapper">
         <!--header start-->
         <div class="header">
@@ -47,6 +48,12 @@
                 </li>
             </div>
         </div>
+        
+
+            {{#if loggedIn}}
+        <button id="logout" class="button-primary">logout</button>
+    {{/if}}
+    
         <!--sidebar end-->
         <!--main container start-->
         <div class="main-container">

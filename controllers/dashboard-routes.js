@@ -5,22 +5,25 @@ const withAuth = require('../utils/auth');
 
 // get all posts for dashboard
 router.get('/', withAuth, (req, res) => {
-
-    console.log(req.session);
-    console.log('======================');
-    Product.findAll({
-      where: {
-        user_id: req.session.user_id
-      }
-    })
-      .then(dbProductData => {
-        const products = dbProductData.map(post => post.get({ plain: true }));
-        res.render('dashboard', {products});
+  console.log(req.session.loggedIn);
+    if(req.session.loggedIn){
+      Product.findAll({
+        where: {
+          user_id: req.session.user_id
+        }
       })
-      .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-      });
+        .then(dbProductData => {
+          const products = dbProductData.map(post => post.get({ plain: true }));
+          res.render('dashboard', {products, loggedIn: req.session.loggedIn});
+        })
+        .catch(err => {
+          console.log(err);
+          res.status(500).json(err);
+        });
+      }
+      else{
+        res.redirect('/');
+      }
   });
   
   router.get('/edit/:id', withAuth, (req, res) => {
