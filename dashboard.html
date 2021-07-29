@@ -42,7 +42,6 @@
 
         <div class="secondary-nav">
             <li class="item">
-                <a href="#" class="menu-btn"  id="dashboard-focus">
                     <i class="fas fa-desktop"></i><span>Dashboard</span>
                 </a>
         
@@ -71,19 +70,126 @@
 
         <!--main container start-->
         <div class="main-container">
-            <div class="primary-card">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-            </div>
-            <div class="secondary-card">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-            </div>
-            <div class="secondary-card">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-            </div>
+            <main class="card-container">
+                <h3>Weekly Report</h3>
+                <br>
+                <div class="cards">
+                    <div class="card-single">
+                        <div>
+                            <h1>$0</h1>
+                            <span class="tooltip">ICC
+                                <span class="tooltiptext">Inventory Carrying Cost</span>
+                            </span>
+                        </div>
+                        
+                        <div>
+                            <span class="fas fa-lemon"></span>
+                        </div>
+                    </div>
+
+                    <div class="card-single">
+                        <div>
+                            <h1>0%</h1>
+                            <span>Waste %</span>
+                        </div>
+                        <div>
+                            <span class="fas fa-trash"></span>
+                        </div>
+                    </div>
+
+                    <div class="card-single">
+                        <div>
+                            <h1>$0</h1>
+                            <span>Waste $</span>
+                        </div>
+                        <div>
+                            <span class="fas fa-shopping-basket"></span>
+                        </div>
+                    </div>
+
+                    <div class="card-single">
+                        <div>
+                            <h1>0%</h1>
+                            <span>Waste %</span>
+                        </div>
+                        <div>
+                            <span class="fas fa-trash"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-grid">
+                    <div class="projects">
+                      <div class="card">
+                        <div class="card-header">
+                          <h2>Inventory Counts</h2>
+                          <button>See all <span class="fas fa-arrow-right"></span> </button>
+                        </div>
+                        <div class="card-body">
+                          <div class="table-responsive">
+                            <table width="100%">
+                            <thead>
+                              <tr>
+                                <td>Week #</td>
+                                <td>Date Complete</td>
+                                <td>Status</td>
+          
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>05</td>
+                                <td>Aug 2</td>
+                                <td>
+                                  <span class="status"></span>
+                                  Upcoming
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>04</td>
+                                <td>July 26</td>
+                                <td>
+                                  <span class="status orange"></span>
+                                  15% waste
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>03</td>
+                                <td>July 19</td>
+                                <td>
+                                  <span class="status red"></span>
+                                  35% waste
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>02</td>
+                                <td>July 12</td>
+                                <td>
+                                  <span class="status green"></span>
+                                  7% waste
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>01</td>
+                                <td>July 5</td>
+                                <td>
+                                  <span class="status red"></span>
+                                  25% waste
+                                </td>
+                              </tr>
+                            </tbody>
+          
+                          </table>
+                          </div>
+                        </div>
+          
+                      </div>
+          
+                    </div>
+
         </div> <!--main container end-->
     </div> <!--sidebar end-->
 </div> <!--end of .wrapper-->
-{{> products products}}
     
 
 <script type="text/javascript">
