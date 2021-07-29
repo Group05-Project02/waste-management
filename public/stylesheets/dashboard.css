@@ -28,7 +28,7 @@
     flex-direction: column;
     background-color: #F7F9FC;
     height: 100vh;
-    width: calc(100vw + 50%);
+    width: 450px;
 }
 
 .secondary-nav {
@@ -50,7 +50,7 @@
     color: #248277;
 }
 
-.dashboard {
+#focus {
     color: #248277;
 }
 
@@ -73,8 +73,11 @@
 }
 
 /* ---------- TITLE ----------*/
-.sidebar-menu {
+.sidebar {
+    width: 100%;
+}
 
+.sidebar-menu {
     background-color: #248277;
     padding: 2em;
 
