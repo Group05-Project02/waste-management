@@ -1,82 +1,71 @@
-<!--sidebar start-->
-<div class="sidebar">
-    <div class="sidebar-menu">
-        <center class="Inventory">
-            <h3>Overview</h3>
-        </center>
-            <a id="logout" href="index.html" class="logout">Logout</a>
-    </div>
-
-    <!--main container start-->
-    <div class="main-container" id="mainDiv">
-        
-        <!-- View products -->
-        <div class="filter-container">
-            <label class="label">
-                <h3>View Products</h3>
-            </label>
-
-            <div class="select">
-                <select id="select">
-                    <option>All Products</option>
-
-                    <option id='catDairy'>Dairy</option>
-                    <option id='catFruits'>Fruits</option>
-                    <option id='catGrains'>Grains</option>
-                    <option id='catProteins'>Proteins</option>
-                    <option id='catVegetable'>Vegetables</option>
-                    <option id='catOthers'>Others</option>
-
-                    <!--
-                    {{#each products}}
-                    <option id="{{id}}">{{name}}</option>
-                    
-                    {{/each}}
-                    -->
-                </select>
-            </div>
+   <!--sidebar start-->
+    <div class="sidebar">
+        <div class="sidebar-menu">
+            <center class="Inventory">
+                <h3>Overview</h3>
+            </center>
+                <a id="logout" href="index.html" class="logout">Logout</a>
         </div>
 
-        <div class="container">
-            <div id="productDiv" class="content">
-                <table id="productOverview">
-                    <col style="width: 40%;"/>
-                    <tr>
-                        <th><label for='itemLabel'>Item</label></th>
-                        <th><label for='qtyLabel'>QTY</label></th>
-                        <th><label for='costLabel'>Cost</label></th>
-                        <th><label for='categoryLabel'>Category</label></th>
-                        <th><label for='buttonEdit'>Edit/Remove</label></th>
-                    </tr>
-                    <tr id="productList">
-                        <!--{{#each products}}-->
-                        <td><label class="label" id="itemLabel">{{name}}</label></td>
-                        <td><label class="label" id="qtyLabel">{{quantity}}</label></td>
-                        <td><label class="label" id="costLabel">{{cost}}</label></td>
-                        <td><label class="label" id="categoryLabel">{{category}}</label></td>
+        <!--main container start-->
+        <div class="main-container" id="mainDiv">
+            
+            <!-- View products -->
+            <div class="filter-container">
+                <label class="label">
+                    <h3>View Products</h3>
+                </label>
 
-                        <td colspan='2' class='buttons'>
-                            <button type='submit' class='button-remove' id='submitButton'><i class="fas fa-minus-circle fa-lg"></i></button>
-                            <button type='submit' class='button-remove' id='submitButton'><i class="fas fa-edit fa-lg"></i></button>
-                        </td>
-                        <!--{{/each}}-->
-                    </tr>
-                    <tr id="productList">
-                        <!--{{#each products}}-->
-                        <td><label class="label" id="itemLabel">{{name}}</label></td>
-                        <td><label class="label" id="qtyLabel">{{quantity}}</label></td>
-                        <td><label class="label" id="costLabel">{{cost}}</label></td>
-                        <td><label class="label" id="categoryLabel">{{category}}</label></td>
+                <div class="select">
+                    <select id="select">
+                        <option>All Products</option>
+    
+                        <option id='catDairy'>Dairy</option>
+                        <option id='catFruits'>Fruits</option>
+                        <option id='catGrains'>Grains</option>
+                        <option id='catProteins'>Proteins</option>
+                        <option id='catVegetable'>Vegetables</option>
+                        <option id='catOthers'>Others</option>
 
-                        <td colspan='2' class='buttons' id="buttonEdit">
-                            <button type='submit' class='button-remove' id='submitButton'><i class="fas fa-minus-circle fa-lg"></i></button>
-                            <button type='submit' class='button-remove' id='submitButton'><i class="fas fa-edit fa-lg"></i></button>
-                        </td>
-                        <!--{{/each}}-->
-                    </tr>
-                </table>
+                        <!--
+                        {{#each products}}
+                        <option id="{{id}}">{{name}}</option>
                         
+                        {{/each}}
+                        -->
+                    </select>
+                </div>
             </div>
-        </div>
-    </div> <!--main container end-->
-</div> <!--sidebar end-->
+
+            <div class="container">
+                <div id="productDiv" class="content">
+                    <table id="productOverview">
+                        <col style="width: 40%;"/>
+                        <tr>
+                            <th><label for='itemLabel'>Item</label></th>
+                            <th><label for='qtyLabel'>QTY</label></th>
+                            <th><label for='costLabel'>Cost</label></th>
+                            <th><label for='categoryLabel'>Category</label></th>
+                        </tr>
+                        <tr id="productList">
+                            <!--{{#each products}}-->
+                            <td><label class="label" id="itemLabel">{{name}}</label></td>
+                            <td><label class="label" id="qtyLabel">{{quantity}}</label></td>
+                            <td><label class="label" id="costLabel">{{cost}}</label></td>
+                            <td><label class="label" id="categoryLabel">{{category}}</label></td>
+                            <!--{{/each}}-->
+                        </tr>
+                        <tr id="productList">
+                            <!--{{#each products}}-->
+                            <td><label class="label" id="itemLabel">{{name}}</label></td>
+                            <td><label class="label" id="qtyLabel">{{quantity}}</label></td>
+                            <td><label class="label" id="costLabel">{{cost}}</label></td>
+                            <td><label class="label" id="categoryLabel">{{category}}</label></td>
+                            <!--{{/each}}-->
+                        </tr>
+                    </table>
+                            
+                </div>
+            </div>
+        </div> <!--main container end-->
+    </div> <!--sidebar end-->
