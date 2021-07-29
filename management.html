@@ -73,73 +73,62 @@
         <div class="main-container" id="mainDiv">
             
             <!-- View products -->
-            <div class="container">
-                <div class="columns is-mobile">
-                    <div class="column">
-                        <div class="card">
-                            <div class="card-content">
-                                <div class="content">
-                                    <div class="control">
-                                        <label class="label">
-                                            <h3>View Products</h3>
-                                        </label>
+            <div class="filter-container">
+                <label class="label">
+                    <h3>View Products</h3>
+                </label>
 
-                                        <div class="select">
-                                            <select id="select">
-                                                <option>All Products</option>
+                <div class="select">
+                    <select id="select">
+                        <option>All Products</option>
+    
+                        <option id='catDairy'>Dairy</option>
+                        <option id='catFruits'>Fruits</option>
+                        <option id='catGrains'>Grains</option>
+                        <option id='catProteins'>Proteins</option>
+                        <option id='catVegetable'>Vegetables</option>
+                        <option id='catOthers'>Others</option>
+
+                        <!--
+                        {{#each products}}
+                        <option id="{{id}}">{{name}}</option>
+                        
+                        {{/each}}
+                        -->
+                    </select>
+                </div>
+            </div>
+
+            <div class="container">
+                <div id="productDiv" class="content">
+                    <table id="productOverview">
+                        <col style="width: 40%;"/>
+                        <tr>
+                            <th><label for='itemLabel'>Item</label></th>
+                            <th><label for='qtyLabel'>QTY</label></th>
+                            <th><label for='costLabel'>Cost</label></th>
+                            <th><label for='categoryLabel'>Category</label></th>
+                        </tr>
+                        <tr id="productList">
+                            <!--{{#each products}}-->
+                            <td><label class="label" id="itemLabel">{{name}}</label></td>
+                            <td><label class="label" id="qtyLabel">{{quantity}}</label></td>
+                            <td><label class="label" id="costLabel">{{cost}}</label></td>
+                            <td><label class="label" id="categoryLabel">{{category}}</label></td>
+                            <!--{{/each}}-->
+                        </tr>
+                        <tr id="productList">
+                            <!--{{#each products}}-->
+                            <td><label class="label" id="itemLabel">{{name}}</label></td>
+                            <td><label class="label" id="qtyLabel">{{quantity}}</label></td>
+                            <td><label class="label" id="costLabel">{{cost}}</label></td>
+                            <td><label class="label" id="categoryLabel">{{category}}</label></td>
+                            <!--{{/each}}-->
+                        </tr>
+                    </table>
                             
-                                                <option id='catDairy'>Dairy</option>
-                                                <option id='catFruits'>Fruits</option>
-                                                <option id='catGrains'>Grains</option>
-                                                <option id='catProteins'>Proteins</option>
-                                                <option id='catVegetable'>Vegetables</option>
-                                                <option id='catOthers'>Others</option>
-
-                                                <!--
-                                                {{#each products}}
-                                                <option id="{{id}}">{{name}}</option>
-                                                
-                                                {{/each}}
-                                                -->
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <br>
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
                 </div>
             </div>
-
-            <div class="container">
-                <div class="columns is-mobile">
-                    <div class="column">
-                        <div class="card">
-                            <div class="card-content">
-                                <div id="productDiv" class="content">
-                                    <label class="label">Product Info</label>
-                                    <ul id="productList">
-                                        {{#each products}}
-                                        <li>
-                                            <label class="label">{{name}}</label>
-                                            <p>Item: {{item}}</p>
-                                            <p>Quantity: {{quantity}}</p>
-                                            <p>Cost: {{cost}}</p>
-                                        </li>
-                                        {{/each}}
-                                    </ul>
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
         </div> <!--main container end-->
     </div> <!--sidebar end-->
 </div> <!--end of .wrapper-->
