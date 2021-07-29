@@ -1,12 +1,21 @@
-<div class="main-container" id="mainDiv">
-    <div id='formDiv'>
-        <form id='invForm'>
-            <fieldset>
-                <legend>
-                    <h3>Add Inventory</h3>
-                    <p>Add new product or view existing products and their inventories.</p>
-                    </legend>
-                <table id='regDetails'>
+<div class="sidebar">
+        <div class="sidebar-menu">
+            <center class="Inventory">
+                <h3>Inventory Management</h3>
+            </center>
+                <a id="logout" href="index.html" class="logout">Logout</a>
+        </div>
+
+        <!--main container start-->
+        <div class="main-container" id="mainDiv">
+            <div id='formDiv'>
+                <form id='invForm'>
+                    <fieldset>
+                        <legend>
+                            <h3>Add Inventory</h3>
+                            <p>Add new product or view existing products and their inventories.</p>
+                        </legend>
+                        <table id='regDetails'>
                             <tr>
                                 <td><label for='itemInput'>Item</label></td>
                                 <td><label for='qtyInput'>QTY</label></td>
@@ -21,7 +30,7 @@
                                 <td><input type='number' id='consumptionInput'/></td>
                                 <td>
                                     <select id='categoryInput'>
-                                        <option id='catBlank' disabled selected value>Select an option</option>
+                                        <option id='catBlank' disabled selected value>Select</option>
                                         <option id='catDairy'>Dairy</option>
                                         <option id='catFruits'>Fruits</option>
                                         <option id='catGrains'>Grains</option>
@@ -33,13 +42,13 @@
                                 <td colspan='2' class='buttons'>
                                     <button type='submit' class='button-add' id='submitButton'><i class="fas fa-plus-circle fa-lg"></i></button>
                                     <button type='submit' class='button-remove' id='submitButton'><i class="fas fa-minus-circle fa-lg"></i></button>
-                                    <button type='submit' class='button-edit' id='submitButton'><i class="fas fa-edit fa-lg"></i></button>
+                                    <button type='submit' class='button-remove' id='submitButton'><i class="fas fa-edit fa-lg"></i></button>
                                 </td>
                             </tr>
                         </table>
-            </fieldset>
-        </from>
-    </div>
-
-    <div id='detailsBox'></div>
-</div>
+                    </fieldset>
+                </from>
+            </div>
+            <div id='detailsBox'></div>
+        </div> <!--main container end-->
+    </div> <!--sidebar end-->
