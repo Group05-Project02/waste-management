@@ -13,16 +13,6 @@ router.get('/login', (req, res) => {
     res.render('index');
   });
 
-  router.get('/signup', (req, res) => {
-    if (req.session.loggedIn) {
-      res.redirect('/');
-      return;
-    }
-  
-    res.render('signup');
-  });
-
-  
   router.get('/add', (req, res) => {
     console.log("in add route");
     if (req.session.loggedIn) {
