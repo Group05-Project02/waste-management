@@ -1,6 +1,65 @@
-.button-add {
-    border: none;
-    width: max-content;
-    color: #248277;
-    
+
+
+#formDiv {
+    width: 100%;
 }
+
+.button-add, .button-remove {
+    border: none;
+    background-color: transparent;
+    margin-left: 1em;
+}
+
+.button-add:hover {
+    color: #333;
+}
+
+.button-add {
+    color: #248277;
+}
+
+.button-remove {
+    color: lightgrey
+}
+
+.button-remove:hover {
+    color: #c74c46;
+}
+
+fieldset {
+    border: none;
+    width: 100%;
+}
+
+table {
+    border-spacing: 3vh 2vh;
+}
+
+
+fieldset h3 {
+    margin-bottom: 3vh;
+}
+
+input {
+    height: 2vh;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+td label {
+    margin: 0;
+}
+
+#itemInput {
+    width: 20vw;
+}
+
+#qtyInput {
+    width: 5vw;
+}
+
+
+
+

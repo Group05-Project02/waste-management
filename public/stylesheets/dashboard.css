@@ -100,7 +100,6 @@
 
 /* ---------- CARDS ----------*/
 .main-container {
-    width: fit-content;
     display: flex;
     padding: 5vh 5vw;
     flex-wrap: wrap;
