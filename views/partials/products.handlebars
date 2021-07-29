@@ -1,7 +1,9 @@
 {{#each this}}
-{{id}}
-{{name}}
-{{price}}
-{{quantity}}
-{{consupmption}}
+    <tr id="productList">
+        <td><label class="label" id="itemLabel">{{name}}</label></td>
+        <td><label class="label" id="qtyLabel">{{quantity}}</label></td>
+        <td><label class="label" id="costLabel">{{cost}}</label></td>
+        <td><label class="label" id="categoryLabel">{{consumption}}</label></td>
+        <td><label class="label" id="waste"> {{quantity}}-{{consumption}}</label></td>
+    </tr>
 {{/each}}

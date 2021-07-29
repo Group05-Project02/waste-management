@@ -14,9 +14,17 @@ router.get('/login', (req, res) => {
   });
 
   router.get('/add', (req, res) => {
-    console.log("in add route");
     if (req.session.loggedIn) {
     res.render('inventory');
+      return;
+    }
+  
+    res.redirect('/');
+  })
+
+  router.get('/overview', (req, res) => {
+    if (req.session.loggedIn) {
+    res.redirect('/dashboard/overview');
       return;
     }
   

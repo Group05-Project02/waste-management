@@ -16,7 +16,7 @@
                     <h3>View Products</h3>
                 </label>
 
-                <div class="select">
+                {{!-- <div class="select">
                     <select id="select">
                         <option>All Products</option>
     
@@ -34,7 +34,7 @@
                         {{/each}}
                         -->
                     </select>
-                </div>
+                </div> --}}
             </div>
 
             <div class="container">
@@ -45,24 +45,10 @@
                             <th><label for='itemLabel'>Item</label></th>
                             <th><label for='qtyLabel'>QTY</label></th>
                             <th><label for='costLabel'>Cost</label></th>
-                            <th><label for='categoryLabel'>Category</label></th>
+                            <th><label for='categoryLabel'>Consumption</label></th>
+                            <th><label for='categoryLabel'>Waste</label></th>
                         </tr>
-                        <tr id="productList">
-                            <!--{{#each products}}-->
-                            <td><label class="label" id="itemLabel">{{name}}</label></td>
-                            <td><label class="label" id="qtyLabel">{{quantity}}</label></td>
-                            <td><label class="label" id="costLabel">{{cost}}</label></td>
-                            <td><label class="label" id="categoryLabel">{{category}}</label></td>
-                            <!--{{/each}}-->
-                        </tr>
-                        <tr id="productList">
-                            <!--{{#each products}}-->
-                            <td><label class="label" id="itemLabel">{{name}}</label></td>
-                            <td><label class="label" id="qtyLabel">{{quantity}}</label></td>
-                            <td><label class="label" id="costLabel">{{cost}}</label></td>
-                            <td><label class="label" id="categoryLabel">{{category}}</label></td>
-                            <!--{{/each}}-->
-                        </tr>
+                        {{> products products}}
                     </table>
                             
                 </div>
