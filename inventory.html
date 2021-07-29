@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WASTEAWAY</title>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" 
+    href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" 
+    integrity="sha384B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" 
+    crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script> 
+   
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&family=Secular+One&display=swap" rel="stylesheet">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+  <link rel="stylesheet" href="/public/stylesheets/style.css">
+  <link rel="stylesheet" href="/public/stylesheets/inventory.css">
+  
+</head>
+
+<div id='mainDiv'>
+    <div id='formDiv'>
+        <form id='invForm'>
+            <fieldset>
+                <legend>Inventory</legend>
+                <table id='regDetails'>
+                    <tr>
+                        <td><label for='itemInput'>Item</label></td>
+                        <td><input type='text' id='itemInput'/></td>
+                    </tr>
+                    <tr>
+                        <td><label for='qtyInput'>QTY</label></td>
+                        <td><input type='number' id='qtyInput'/></td>
+                    </tr>
+                    <tr>
+                     <td><label for='costInput'>Cost</label></td>
+                     <td><input type='number' id='costInput'/></td>
+                 </tr>
+                 <tr>
+                     <td><label for='consumptionInput'>Consumption</label></td>
+                     <td><input type='number' id='consumptionInput'/></td>
+                 </tr>
+                    <tr>
+                     <td colspan='2'><button type='submit' class="button-primary" id='submitButton'>Add Product</button></td>
+                    </tr>
+                </table>
+            </fieldset>
+        </from>
+    </div>
+    <div id='detailsBox'></div>
+</div>
+
+<script src="./javascript/add-product.js"></script>
