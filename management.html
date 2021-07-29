@@ -108,6 +108,7 @@
                             <th><label for='qtyLabel'>QTY</label></th>
                             <th><label for='costLabel'>Cost</label></th>
                             <th><label for='categoryLabel'>Category</label></th>
+                            <th><label for='buttonEdit'>Edit/Remove</label></th>
                         </tr>
                         <tr id="productList">
                             <!--{{#each products}}-->
@@ -115,6 +116,11 @@
                             <td><label class="label" id="qtyLabel">{{quantity}}</label></td>
                             <td><label class="label" id="costLabel">{{cost}}</label></td>
                             <td><label class="label" id="categoryLabel">{{category}}</label></td>
+
+                            <td colspan='2' class='buttons'>
+                                <button type='submit' class='button-remove' id='submitButton'><i class="fas fa-minus-circle fa-lg"></i></button>
+                                <button type='submit' class='button-remove' id='submitButton'><i class="fas fa-edit fa-lg"></i></button>
+                            </td>
                             <!--{{/each}}-->
                         </tr>
                         <tr id="productList">
@@ -123,6 +129,11 @@
                             <td><label class="label" id="qtyLabel">{{quantity}}</label></td>
                             <td><label class="label" id="costLabel">{{cost}}</label></td>
                             <td><label class="label" id="categoryLabel">{{category}}</label></td>
+
+                            <td colspan='2' class='buttons' id="buttonEdit">
+                                <button type='submit' class='button-remove' id='submitButton'><i class="fas fa-minus-circle fa-lg"></i></button>
+                                <button type='submit' class='button-remove' id='submitButton'><i class="fas fa-edit fa-lg"></i></button>
+                            </td>
                             <!--{{/each}}-->
                         </tr>
                     </table>
