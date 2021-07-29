@@ -1,0 +1,109 @@
+.wrapper {
+    display: flex;
+}
+
+/* ---------- NAVIGATION ----------*/
+.logo {
+    font-family: 'Oswald', sans-serif;
+    float: left;
+    padding: 1.5em 0;
+}
+.navbar-brand {
+    font-weight: 900;
+    color: #333;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.15em;
+    font-size: 15px;
+}
+
+.navbar-brand img {
+    height: calc(20px + 1vh);
+}
+
+.secondary-nav-container {
+    padding-left: 3%;
+    display: flex;
+    flex-direction: column;
+    background-color: #F7F9FC;
+    height: 100vh;
+    width: calc(100vw + 50%);
+}
+
+.secondary-nav {
+    list-style: none; 
+    text-align: left;
+}
+
+.item {
+    margin-bottom: 20px;
+}
+
+.item a, .logout {
+    padding: 0.75em 1em;
+    color: black;
+    text-decoration: none;
+}
+
+.item a:hover {
+    color: #248277;
+}
+
+.item a i {
+    margin-right: 10px;
+}
+
+.drop-down {
+   margin-left: 1em;
+}
+
+.sub-menu {
+    display: flex;
+    flex-direction: column;
+    margin: 1vh 0 0 50px;
+}
+
+.sub-menu a {
+    font-size: 1em;
+}
+
+/* ---------- TITLE ----------*/
+.sidebar-menu {
+
+    background-color: #248277;
+    padding: 2em;
+
+    color: white;
+    font-weight: bold;
+}
+
+.logout {
+    position: absolute;
+    right: 3%;
+    top: 2em;
+
+    color: white;
+    font-size: 0.8em;
+}
+
+.logout:hover {
+    color: #333;
+}
+
+/* ---------- CARDS ----------*/
+.main-container {
+    width: fit-content;
+    display: flex;
+    padding: 5vh 5vw;
+    flex-wrap: wrap;
+    gap: 0 10%;
+}
+
+.primary-card {
+    width: 100%;
+}
+
+.secondary-card {
+    width: 45%;
+}
