@@ -1,4 +1,5 @@
-<div class="sidebar">
+<!--sidebar start-->
+    <div class="sidebar">
         <div class="sidebar-menu">
             <center class="Inventory">
                 <h3>Inventory Management</h3>
@@ -28,7 +29,7 @@
                                 <td><input type='number' id='qtyInput'/></td>
                                 <td><input type='number' id='costInput'/></td>
                                 <td><input type='number' id='consumptionInput'/></td>
-                                <td>
+                                <!--<td>
                                     <select id='categoryInput'>
                                         <option id='catBlank' disabled selected value>Select</option>
                                         <option id='catDairy'>Dairy</option>
@@ -37,7 +38,7 @@
                                         <option id='catProteins'>Proteins</option>
                                         <option id='catVegetable'>Vegetables</option>
                                         <option id='catOthers'>Others</option>
-                                </td>
+                                </td>-->
                             
                                 <td colspan='2' class='buttons'>
                                     <button type='submit' class='button-add' id='submitButton'><i class="fas fa-plus-circle fa-lg"></i></button>
@@ -52,3 +53,15 @@
             <div id='detailsBox'></div>
         </div> <!--main container end-->
     </div> <!--sidebar end-->
+</div> <!--end of .wrapper-->
+    
+<script src="./javascript/add-product.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".sidebar-btn").click(function(){
+            $(".wrapper").toggleClass("collapse");
+        });
+    });
+    
+    </script>
