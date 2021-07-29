@@ -199,12 +199,12 @@
 }
 
 .card-header button{
-    background: var(--main-color);
+    background: #248277;
     border-radius: 10px;
     color: #fff;
     font-size: .8rem;
     padding: .5rem 1rem;
-    border:1px solid var(--main-color);
+    border:1px solid #248277;
 }
 
 table {
