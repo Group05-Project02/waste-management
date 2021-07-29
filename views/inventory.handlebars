@@ -2,29 +2,43 @@
     <div id='formDiv'>
         <form id='invForm'>
             <fieldset>
-                <legend><h3>Add Inventory</h3></legend>
+                <legend>
+                    <h3>Add Inventory</h3>
+                    <p>Add new product or view existing products and their inventories.</p>
+                    </legend>
                 <table id='regDetails'>
-                    <tr>
-                        <td><label for='itemInput'>Item</label></td>
-                        <td><label for='qtyInput'>QTY</label></td>
-                        <td><label for='costInput'>Cost</label></td>
-                        <td><label for='consumptionInput'>Consumption</label></td>
-                    </tr>
-                    <tr>
-                        <td><input type='text' id='itemInput'/></td>
-                        <td><input type='number' id='qtyInput'/></td>
-                        <td><input type='number' id='costInput'/></td>
-                        <td><input type='number' id='consumptionInput'/></td>
-                    
-                        <td colspan='2'>
-                            <button type='submit' class='button-add' id='submitButton'><i class="fas fa-plus-circle fa-lg"></i></button>
-                            <button type='submit' class='button-remove' id='submitButton'><i class="fas fa-minus-circle fa-lg"></i></button>
-                        </td>
-                    </tr>
-                </table>
+                            <tr>
+                                <td><label for='itemInput'>Item</label></td>
+                                <td><label for='qtyInput'>QTY</label></td>
+                                <td><label for='costInput'>Cost</label></td>
+                                <td><label for='consumptionInput'>Consumption</label></td>
+                                <td><label for='categoryInput'>Category</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type='text' id='itemInput'/></td>
+                                <td><input type='number' id='qtyInput'/></td>
+                                <td><input type='number' id='costInput'/></td>
+                                <td><input type='number' id='consumptionInput'/></td>
+                                <td>
+                                    <select id='categoryInput'>
+                                        <option id='catBlank' disabled selected value>Select an option</option>
+                                        <option id='catDairy'>Dairy</option>
+                                        <option id='catFruits'>Fruits</option>
+                                        <option id='catGrains'>Grains</option>
+                                        <option id='catProteins'>Proteins</option>
+                                        <option id='catVegetable'>Vegetables</option>
+                                        <option id='catOthers'>Others</option>
+                                </td>
+                            
+                                <td colspan='2' class='buttons'>
+                                    <button type='submit' class='button-add' id='submitButton'><i class="fas fa-plus-circle fa-lg"></i></button>
+                                    <button type='submit' class='button-remove' id='submitButton'><i class="fas fa-minus-circle fa-lg"></i></button>
+                                </td>
+                            </tr>
+                        </table>
             </fieldset>
         </from>
     </div>
-    
+
     <div id='detailsBox'></div>
 </div>
