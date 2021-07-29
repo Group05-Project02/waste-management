@@ -1,0 +1,33 @@
+<div id='mainDiv'>
+       <div id='formDiv'>
+           <form id='invForm'>
+               <fieldset>
+                   <legend>Inventory</legend>
+                   <table id='regDetails'>
+                       <tr>
+                           <td><label for='itemInput'>Item</label></td>
+                           <td><input type='text' id='itemInput'/></td>
+                       </tr>
+                       <tr>
+                           <td><label for='qtyInput'>QTY</label></td>
+                           <td><input type='number' id='qtyInput'/></td>
+                       </tr>
+                       <tr>
+                        <td><label for='costInput'>Cost</label></td>
+                        <td><input type='number' id='costInput'/></td>
+                    </tr>
+                    <tr>
+                        <td><label for='consumptionInput'>Consumption</label></td>
+                        <td><input type='number' id='consumptionInput'/></td>
+                    </tr>
+                       <tr>
+                        <td colspan='2'><button type='submit' class="button-primary" id='submitButton'>Add Product</button></td>
+                       </tr>
+                   </table>
+               </fieldset>
+           </from>
+       </div>
+       <div id='detailsBox'></div>
+   </div>
+
+<script src="./javascript/add-product.js"></script>

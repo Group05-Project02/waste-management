@@ -1,0 +1,144 @@
+<!--------------------------NAVIGATION-------------------------->
+<section class="header">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-md navbar-selection">
+            <div class="logo">
+                <a class="navbar-brand" href="index.html">
+                    <img src="/images/logo.png" alt="logo">
+                    WasteAway
+                </a>
+            </div>
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#pricing">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll login" href="#login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll d-flex flex-row align-items-center text-primary" href="#">
+                        <button class="button-secondary">
+                            How it works
+                        </button>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </div>
+</section>
+
+<!----------------------SIGNUP/SIGNIN MODAL ---------------------->
+<div class="overlay">
+</div>
+
+<div class="main-popup">
+  <div class="popup-header">
+        <div id="popup-close-button"><a href="#"></a></div>
+        <ul>
+            <li><a href="#" id="sign-in">Sign In</a></li>
+            <li><a href="#" id="register">Register</a></li>
+        </ul>
+  </div>
+
+    <!--.popup-header-->
+    <div class="popup-content">
+        <form action="#" class="sign-in">
+            <label for="email">Email:</label>
+            <input type="text" id="email">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password">
+
+            <p class="check-mark">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Remember me</label>
+            </p>
+
+            <input type="submit" id="submitSignIn" value="Submit">
+        </form>
+    
+        <form action="#" class="register">
+            <label for="name-register">Name:</label>
+            <input type="text" id="name-register">
+            <label for="email-register">Email:</label>
+            <input type="text" id="email-register">
+            <label for="password-register">Password:</label>
+            <input type="password" id="password-register">
+            <p class="check-mark">
+                <input type="checkbox" id="accept-terms">
+                <label for="accept-terms">I agree to the <a href="#">Terms & Conditions</a></label>
+            </p>
+            <input type="submit" id="submitRegister" value="Create Account">
+        </form>
+    </div>
+</div>
+
+<!-------------------------- MOBILE MENU --------------------------> 
+<div class="hamburger-menu">
+
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
+
+
+    <ul class="menu__box">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">How it works</a></li>
+        <li><a href="#" class="login">Login</a></li>
+    </ul>
+  </div>
+
+<!-------------------------- HERO SECTION -------------------------->
+<main>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-inside">
+                <h1 class="hero-title mt-0">Waste<br>Management</h1>
+                <p>Know what's happening at a glance with inventory management software that does the work for you — right in WasteAway Enterprise.</p>
+                <button class="button-primary signup" href="#">Sign Up</button>
+            </div>  
+
+            <div class="hero-image">
+                <img src="/images/hero-image.png" alt="hero image">
+            </div>
+        </div> 
+    </section>
+</main>
+
+<!-------------------------- FEATURE SECTION -------------------------->
+<section class="feature">
+    <div class="container-sm">
+        <h2 class="section-title mt-0">Benefits</h2>
+    </div>
+
+    <div class="feature-container">
+        <div class="feature-card">
+            <img src="/images/environment.png" alt="Feature image 1">
+            <h3 class="feature-title mt-24">Environmental Impact</h3>
+            <p class="text-sm mb-0">Improperly managed inventory increases food waste. This causes air, water, and soil pollution. Ultimetely, it making it difficult for humans and other animals to live and thrive in their environments.</p>
+        </div>
+
+        <div class="feature-card">
+            <img src="/images/production.png" alt="Feature image 2">
+            <h3 class="feature-title mt-24">Reduce Production Cost</h3>
+            <p class="text-sm mb-0">When you optimize the inventory utilization and minimum waste generation, it automatically reduces your production cost. And, when you reduce the production cost, it helps you grow your buisness followed by margins!</p>
+        </div>
+
+        <div class="feature-card">
+                <img src="/images/profit.png" alt="Feature image 3">
+                <h3 class="feature-title mt-24">Increase Profit Margins</h3>
+                <p class="text-sm mb-0">Adopting a food inventory management system can help you maintain your profit margins. Along with labor costs, replenishing your inventory is the most significant expense your buisness faces.</p>
+        </div>
+    </div>
+
+</section>
+
+{{!-- <script src="./javascript/login.js"></script> --}}
