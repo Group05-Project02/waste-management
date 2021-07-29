@@ -20,8 +20,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&family=Secular+One&display=swap" rel="stylesheet">
     
       <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
-      <link rel="stylesheet" href="../../public/stylesheets/style.css">
-      <link rel="stylesheet" href="../../public/stylesheets/dashboard.css">
+      <link rel="stylesheet" href="../public/stylesheets/style.css">
+      <link rel="stylesheet" href="../public/stylesheets/dashboard.css">
     </head>
 
     <div class="wrapper">
@@ -31,7 +31,7 @@
                 <div class="header-menu">
                     <div class="title logo">
                         <a class="navbar-brand" href="index.html">
-                            <img src="../../public/images/logo.png" alt="logo">
+                            <img src="../public/images/logo.png" alt="logo">
                             Waste Management
                         </a>
                     </div>
@@ -81,7 +81,9 @@
                 <center class="Inventory">
                     <h3>Inventory</h3>
                 </center>
-                <a id="logout" href="index.html" class="logout">Logout</a>
+                {{#if loggedIn}}
+                    <a id="logout" href="index.html" class="logout">Logout</a>
+                {{/if}}
             </div>
 
             <!--main container start-->
@@ -98,6 +100,7 @@
             </div> <!--main container end-->
         </div> <!--sidebar end-->
     </div> <!--end of .wrapper-->
+    {{> products products}}
         
 
     <script type="text/javascript">
