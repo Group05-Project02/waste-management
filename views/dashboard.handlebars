@@ -12,36 +12,20 @@
                 </div>
             </div>
 
-            <div class="secondary-nav">
+                <div class="secondary-nav">
                 <li class="item">
-                    <a href="#" class="menu-btn">
+                    <a href="#" class="menu-btn"  id="dashboard-focus">
                         <i class="fas fa-desktop"></i><span>Dashboard</span>
                     </a>
             
                 </li>
                 <li class="item" id="inventory-overview">
-                    <a href="#inventory-overview" class="menu-btn">
-                        <i class="fas fa-cog"></i><span>Inventory Overview <i class="fas fa-chevron-down drop-down"></i></span>
+                    <a href="#inventory-overview" class="menu-btn" id="inventory-focus">
+                        <i class="fas fa-cog"></i><span>Inventory <i class="fas fa-chevron-down drop-down"></i></span>
                     </a>
                     <div class="sub-menu">
-                        <a href="#"><i class="fas fa-overview-card"></i><span>Info</span></a>
-                    </div>
-                </li>
-                <li class="item" id="inventory-management">
-                    <a href="#inventory-management" class="menu-btn">
-                        <i class="fas fa-user-circle"></i><span>Inventory Management<i class="fas fa-chevron-down drop-down"></i></span>
-                    </a>
-                    <div class="sub-menu">
-                        <a href="/add"><i class="fas fa-overview-card"></i><span>Add Products</span></a>
-                    </div>
-                </li>
-                <li class="item" id="orders-recieved">
-                    <a href="#orders-recieved" class="menu-btn">
-                        <i class="fas fa-cog"></i><span>New Orders<i class="fas fa-chevron-down drop-down"></i></span>
-                    </a>
-                    <div class="sub-menu">
-                        <a href="#"><i class="fas fa-overview-card"></i><span>New Products</span></a>
-                        <a href="#"><i class="fas fa-overview-card"></i><span>All Products</span></a>
+                        <a href="#" id="overview-focus"><i class="fas fa-overview-card"></i><span>Overview</span></a>
+                        <a href="#" id="management-focus"><i class="fas fa-overview-card"></i><span>Inventory Management</span></a>
                     </div>
                 </li>
             </div>
@@ -53,7 +37,7 @@
         <div class="sidebar">
             <div class="sidebar-menu">
                 <center class="Inventory">
-                    <h3>Inventory</h3>
+                    <h3>Dashboard</h3>
                 </center>
                 {{#if loggedIn}}
                     <a id="logout" href="index.html" class="logout">Logout</a>
