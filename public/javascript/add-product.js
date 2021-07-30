@@ -27,4 +27,4 @@ async function newProductHandler(event) {
     }
   }
   
-  document.querySelector('#submitButton').addEventListener('click', newProductHandler);
+  document.querySelector('#addProduct').addEventListener('click', newProductHandler);

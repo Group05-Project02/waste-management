@@ -21,26 +21,14 @@
                                 <td><label for='qtyInput'>QTY</label></td>
                                 <td><label for='costInput'>Cost</label></td>
                                 <td><label for='consumptionInput'>Consumption</label></td>
-                                <td><label for='categoryInput'>Category</label></td>
                             </tr>
                             <tr>
                                 <td><input type='text' id='itemInput'/></td>
                                 <td><input type='number' id='qtyInput'/></td>
                                 <td><input type='number' id='costInput'/></td>
                                 <td><input type='number' id='consumptionInput'/></td>
-                                <td>
-                                    <select id='categoryInput'>
-                                        <option id='catBlank' disabled selected value>Select</option>
-                                        <option id='catDairy'>Dairy</option>
-                                        <option id='catFruits'>Fruits</option>
-                                        <option id='catGrains'>Grains</option>
-                                        <option id='catProteins'>Proteins</option>
-                                        <option id='catVegetable'>Vegetables</option>
-                                        <option id='catOthers'>Others</option>
-                                </td>
-                            
                                 <td colspan='2' class='buttons'>
-                                    <button type='submit' class='button-add' id='submitButton'><i class="fas fa-plus-circle fa-lg"></i></button>
+                                    <button type='submit' class='button-add' id='addProduct'><i class="fas fa-plus-circle fa-lg"></i></button>
                                 </td>
                             </tr>
                         </table>
@@ -50,3 +38,6 @@
             <div id='detailsBox'></div>
         </div> <!--main container end-->
     </div> <!--sidebar end-->
+
+    
+<script src="./javascript/add-product.js"></script>
