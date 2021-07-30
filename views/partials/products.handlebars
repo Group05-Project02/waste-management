@@ -6,7 +6,8 @@
         <td><label class="label" id="costLabel">${{price}} per item</label></td>
         <td><label class="label" id="categoryLabel">{{consumption}}</label></td>
         <td><label class="label" id="waste"> {{subtract quantity consumption}}</label></td>
-        <td><label class="label" id="waste"> ${{loss quantity consumption price}}</label></td>
+        <td><label class="label" id="loss"> ${{loss quantity consumption price}}</label></td>
+        <td><label class="label" id="delete"><a href="/delete/{{id}}"> <i class="fas fa-minus-circle"></i></a></label></td>
     </tr>
 {{/each}}
 <h5>Waste percentage : {{percentage quantity consumption price}}%</h5>
