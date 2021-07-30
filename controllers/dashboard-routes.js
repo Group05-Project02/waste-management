@@ -20,23 +20,6 @@ router.get('/', withAuth, (req, res) => {
         });
   });
 
-  
-// get all posts for dashboard
-router.get('/overview', withAuth, (req, res) => {
-  Product.findAll({
-    where: {
-      user_id: req.session.user_id
-    }
-  })
-    .then(dbProductData => {
-      const products = dbProductData.map(post => post.get({ plain: true }));
-      res.render('management', {products});
-    })
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
 
   router.get('/edit/:id', withAuth, (req, res) => {
     Product.findByPk(req.params.id, {

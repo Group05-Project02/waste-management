@@ -1,9 +1,15 @@
+{{#if this.length}}
 {{#each this}}
     <tr id="productList">
         <td><label class="label" id="itemLabel">{{name}}</label></td>
         <td><label class="label" id="qtyLabel">{{quantity}}</label></td>
-        <td><label class="label" id="costLabel">{{cost}}</label></td>
+        <td><label class="label" id="costLabel">${{price}} per item</label></td>
         <td><label class="label" id="categoryLabel">{{consumption}}</label></td>
-        <td><label class="label" id="waste"> {{quantity}}-{{consumption}}</label></td>
+        <td><label class="label" id="waste"> {{subtract quantity consumption}}</label></td>
+        <td><label class="label" id="waste"> ${{loss quantity consumption price}}</label></td>
     </tr>
 {{/each}}
+<h5>Waste percentage : {{percentage quantity consumption price}}%</h5>
+{{else}}
+<h5>add some products</h5>
+{{/if}}

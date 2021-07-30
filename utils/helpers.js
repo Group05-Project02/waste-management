@@ -5,6 +5,15 @@ module.exports = {
       }
   
       return word;
+    },
+    subtract: (arg1, arg2) => {
+      return arg1-arg2;
+    },
+    loss: (quantity, consumption, price) => {
+      return (quantity-consumption)*price;
+    },
+    percentage: (quantity, consumption, price) => {
+      return ((quantity-consumption)*price)/(quantity*price);
     }
   };
   
