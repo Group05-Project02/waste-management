@@ -73,6 +73,12 @@ td label {
     width: 5vw;
 }
 
+.inv-container {
+    display: flex;
+    flex-direction: column;
+    padding: 5vh;
+}
+
 /* ------- Management ----------*/
 .filter-container {
     display: flex;
@@ -174,5 +180,9 @@ td label {
 
 #itemLabel {
     column-width: 500px;
+}
+
+.fa-minus-circle {
+    color: red;
 }
 

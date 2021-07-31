@@ -1,9 +1,44 @@
+<div class="wrapper">
+    <!--header start-->
+    <div class="secondary-nav-container">
+        <div class="header">
+            <div class="header-menu">
+                <div class="title logo">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="/images/logo.png"" alt="logo">
+                        Waste Management
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="secondary-nav">
+            <li class="item">
+                    <i class="fas fa-desktop"></i><span>Dashboard</span>
+                </a>
+        
+            </li>
+            <li class="item" id="inventory-overview">
+                <a href="#inventory-overview" class="menu-btn" id="inventory-focus">
+                    <i class="fas fa-cog"></i><span>Inventory <i class="fas fa-chevron-down drop-down"></i></span>
+                </a>
+                <div class="sub-menu">
+                    <a href="/overview" id="overview-focus"><i class="fas fa-overview-card"></i><span>Overview</span></a>
+                    <a href="/add" id="management-focus"><i class="fas fa-overview-card"></i><span>Inventory Management</span></a>
+                </div>
+            </li>
+        </div>
+    </div>
+
+    <!--header menu end-->
 <div class="sidebar">
         <div class="sidebar-menu">
             <center class="Inventory">
                 <h3>Inventory Management</h3>
             </center>
+            {{#if loggedIn}}
                 <a id="logout" href="index.html" class="logout">Logout</a>
+            {{/if}} 
         </div>
 
         <!--main container start-->
@@ -38,6 +73,7 @@
             <div id='detailsBox'></div>
         </div> <!--main container end-->
     </div> <!--sidebar end-->
+</div><!--end of .wrapper-->
 
     
 <script src="./javascript/add-product.js"></script>

@@ -4,6 +4,10 @@
     font-size: calc(15px + 0.3vw);
 }
 
+body {
+    margin: 0;
+}
+
 h1 {
     font-family: 'Secular One', sans-serif;
     font-size: calc(1em + 5vh);

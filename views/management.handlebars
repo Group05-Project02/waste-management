@@ -1,24 +1,59 @@
+   <div class="wrapper">
+    <!--header start-->
+    <div class="secondary-nav-container">
+        <div class="header">
+            <div class="header-menu">
+                <div class="title logo">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="/images/logo.png"" alt="logo">
+                        Waste Management
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="secondary-nav">
+            <li class="item">
+                <a href="#dashboard" class="menu-btn">
+                    <i class="fas fa-desktop"></i><span>Dashboard</span>
+                </a>
+        
+            </li>
+            <li class="item" id="inventory-overview">
+                <a href="#inventory-overview" class="menu-btn">
+                    <i class="fas fa-cog"></i><span>Inventory <i class="fas fa-chevron-down drop-down"></i></span>
+                </a>
+                <div class="sub-menu">
+                    <a href="/overview" id="focus"><i class="fas fa-overview-card"></i><span>Overview</span></a>
+                    <a href="/add"><i class="fas fa-overview-card"></i><span>Inventory Management</span></a>
+                </div>
+            </li>
+        </div>
+    </div>
+
    <!--sidebar start-->
     <div class="sidebar">
         <div class="sidebar-menu">
             <center class="Inventory">
                 <h3>Overview</h3>
             </center>
+                {{#if loggedIn}}
                 <a id="logout" href="index.html" class="logout">Logout</a>
+                {{/if}}
         </div>
 
         <!--main container start-->
-        <div class="main-container" id="mainDiv">
+        <div class="inv-container" id="mainDiv">
             
             {{#if products.length}}
             <!-- View products -->
             <div class="filter-container">
                 <label class="label">
-                    <h3>View Products</h3>
+                    <h3>View All Products</h3>
                 </label>
             </div>
 
-            <div class="container">
+            <div class="container-db">
                 <div id="productDiv" class="content">
                     <h4>Waste Percentage Quantity : {{wasteQuantityPercentage products}}%</h4>
                     <h4>Waste Cost : ${{wasteCost products}}</h4>
@@ -31,6 +66,7 @@
                             <th><label for='consumptionLabel'>Consumption</label></th>
                             <th><label for='wasteLabel'>Waste</label></th>
                             <th><label for='lossLabel'>Loss</label></th>
+                            <th><label for='lossLabel'>Remove</label></th>
                         </tr>
                         {{> products products}}
                     </table>
@@ -41,3 +77,4 @@
             </div>
         </div> <!--main container end-->
     </div> <!--sidebar end-->
+</div>
