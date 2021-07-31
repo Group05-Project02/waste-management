@@ -26,6 +26,11 @@ h3 {
     margin: 0;
 }
 
+h4 {
+    font-size: calc(1em + 0.5vh);
+    font-weight: lighter;
+}
+
 p {
     line-height: 1.5em;
 }

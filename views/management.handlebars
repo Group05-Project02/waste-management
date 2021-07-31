@@ -20,7 +20,7 @@
         
             </li>
             <li class="item" id="inventory-overview">
-                <a href="#inventory-overview" class="menu-btn">
+                <a href="#inventory-overview" class="menu-btn" id="focus">
                     <i class="fas fa-cog"></i><span>Inventory <i class="fas fa-chevron-down drop-down"></i></span>
                 </a>
                 <div class="sub-menu">
@@ -55,8 +55,10 @@
 
             <div class="container-db">
                 <div id="productDiv" class="content">
-                    <h4>Waste Percentage Quantity : {{wasteQuantityPercentage products}}%</h4>
-                    <h4>Waste Cost : ${{wasteCost products}}</h4>
+                    <div class="overview-sum">
+                        <p><b>Waste Percentage Quantity</b> : {{wasteQuantityPercentage products}}%</p>
+                        <p><b>Waste Cost</b> : ${{wasteCost products}}</p>
+                    </div>
                     <table id="productOverview">
                         <col style="width: 40%;"/>
                         <tr>
@@ -66,12 +68,18 @@
                             <th><label for='consumptionLabel'>Consumption</label></th>
                             <th><label for='wasteLabel'>Waste</label></th>
                             <th><label for='lossLabel'>Loss</label></th>
-                            <th><label for='lossLabel'>Remove</label></th>
+                            <th><label for='deleteLabel'>Remove</label></th>
                         </tr>
                         {{> products products}}
                     </table>
                     {{else}}
-                    <h5>add some products</h5>
+                    <div class="add-button">
+                        <a href="/add">
+                            <button class="button-primary">
+                                <i class="fas fa-plus"></i> Add products
+                            </button>
+                        </a>
+                    </div>
                     {{/if}}
                 </div>
             </div>
