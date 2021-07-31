@@ -1,16 +1,20 @@
-{{#if this.length}}
 {{#each this}}
     <tr id="productList">
+        {{!-- <td><label class="label" id="itemLabel"><label class="label" id="delete"><a href="/delete/{{id}}"> <i class="fas fa-minus-circle"></i></a></label>{{name}}</label></td> --}}
         <td><label class="label" id="itemLabel">{{name}}</label></td>
         <td><label class="label" id="qtyLabel">{{quantity}}</label></td>
-        <td><label class="label" id="costLabel">${{price}} per item</label></td>
-        <td><label class="label" id="categoryLabel">{{consumption}}</label></td>
+        <td><label class="label" id="costLabel">${{price}}</label></td>
+        <td><label class="label" id="consumptionLabel">{{consumption}}</label></td>
         <td><label class="label" id="waste"> {{subtract quantity consumption}}</label></td>
         <td><label class="label" id="loss"> ${{loss quantity consumption price}}</label></td>
         <td><label class="label" id="delete"><a href="/delete/{{id}}"> <i class="fas fa-minus-circle"></i></a></label></td>
     </tr>
 {{/each}}
-<h5>Waste percentage : {{percentage quantity consumption price}}%</h5>
-{{else}}
-<h5>add some products</h5>
-{{/if}}
+<tr id="productList">
+        <td><label class="label" ></label></td>
+        <td><label class="label" ></label></td>
+        <td><label class="label" ></label></td>
+        <td><label class="label" id="toatlcost"></label></td>
+        <td><label class="label" >Total Loss :</label></td>
+        <td><label class="label" id="totalloss">${{wasteCost this}}</label></td>
+    </tr>

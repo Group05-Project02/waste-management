@@ -51,7 +51,7 @@
                 <div class="cards">
                     <div class="card-single">
                         <div>
-                            <h1>$0</h1>
+                            <h1>${{totalCost products}}</h1>
                             <span class="tooltip">ICC
                                 <span class="tooltiptext">Inventory Carrying Cost</span>
                             </span>
@@ -64,18 +64,8 @@
 
                     <div class="card-single">
                         <div>
-                            <h1>$0</h1>
-                            <span>Purchase</span>
-                        </div>
-                        <div>
-                            <span class="fas fa-dolly-flatbed"></span>
-                        </div>
-                    </div>
-
-                    <div class="card-single">
-                        <div>
-                            <h1>$0</h1>
-                            <span>Waste $</span>
+                            <h1>${{wasteCost products}}</h1>
+                            <span>Waste Cost $</span>
                         </div>
                         <div>
                             <span class="fas fa-shopping-basket"></span>
@@ -84,8 +74,8 @@
 
                     <div class="card-single">
                         <div>
-                            <h1>0%</h1>
-                            <span>Waste %</span>
+                            <h1>{{wasteQuantityPercentage products}}%</h1>
+                            <span>Waste Quantity %</span>
                         </div>
                         <div>
                             <span class="fas fa-trash"></span>

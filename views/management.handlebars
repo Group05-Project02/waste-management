@@ -10,48 +10,33 @@
         <!--main container start-->
         <div class="main-container" id="mainDiv">
             
+            {{#if products.length}}
             <!-- View products -->
             <div class="filter-container">
                 <label class="label">
                     <h3>View Products</h3>
                 </label>
-
-                {{!-- <div class="select">
-                    <select id="select">
-                        <option>All Products</option>
-    
-                        <option id='catDairy'>Dairy</option>
-                        <option id='catFruits'>Fruits</option>
-                        <option id='catGrains'>Grains</option>
-                        <option id='catProteins'>Proteins</option>
-                        <option id='catVegetable'>Vegetables</option>
-                        <option id='catOthers'>Others</option>
-
-                        <!--
-                        {{#each products}}
-                        <option id="{{id}}">{{name}}</option>
-                        
-                        {{/each}}
-                        -->
-                    </select>
-                </div> --}}
             </div>
 
             <div class="container">
                 <div id="productDiv" class="content">
+                    <h4>Waste Percentage Quantity : {{wasteQuantityPercentage products}}%</h4>
+                    <h4>Waste Cost : ${{wasteCost products}}</h4>
                     <table id="productOverview">
                         <col style="width: 40%;"/>
                         <tr>
                             <th><label for='itemLabel'>Item</label></th>
                             <th><label for='qtyLabel'>QTY</label></th>
-                            <th><label for='costLabel'>Cost</label></th>
+                            <th><label for='costLabel'>Total Cost</label></th>
                             <th><label for='consumptionLabel'>Consumption</label></th>
                             <th><label for='wasteLabel'>Waste</label></th>
                             <th><label for='lossLabel'>Loss</label></th>
                         </tr>
                         {{> products products}}
                     </table>
-                            
+                    {{else}}
+                    <h5>add some products</h5>
+                    {{/if}}
                 </div>
             </div>
         </div> <!--main container end-->
