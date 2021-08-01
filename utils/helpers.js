@@ -40,9 +40,11 @@ module.exports = {
     },
 
     totalCost: (products) =>{
-      var totalCost=0;
-      products.forEach(product => totalCost+=product.price);
-      return totalCost.toFixed(2);
+      var totalCost=0.00;
+      products.forEach(product => {
+        totalCost+=parseFloat(product.price);
+      });
+      return totalCost;
     }
   };
   
