@@ -1,5 +1,6 @@
 .wrapper {
     display: flex;
+    height: 100vh;
 }
 
 /* ---------- NAVIGATION ----------*/
@@ -27,7 +28,6 @@
     display: flex;
     flex-direction: column;
     background-color: #F7F9FC;
-    height: 100vh;
     width: 450px;
 }
 
@@ -72,6 +72,10 @@
     font-size: 1em;
 }
 
+#focus {
+    color: #248277;
+}
+
 /* ---------- TITLE ----------*/
 .sidebar {
     width: 100%;
@@ -102,7 +106,6 @@
 .main-container {
     display: flex;
     padding: 5vh 5vw;
-    flex-wrap: wrap;
     gap: 0 10%;
 
     background: white;
@@ -118,17 +121,20 @@
 }
 
 .cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 .card-single {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
     background: #F3F6FA;
     padding: 2.5rem;
     border-radius: 12px;
+    width: 15%;
 }
 
 .card-single div:last-child span{
@@ -142,6 +148,16 @@
 
 .card-single:last-child{
     background: #248277;
+}
+
+@media (max-width:1220px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    .card-single {
+        width: 50%;
+    }
 }
 
 .card-single:last-child h1,
@@ -188,17 +204,14 @@
 }
 
 .card-header {
-    padding: 1rem;
-}
-
-.card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #f0f0f0;
+    padding: 1rem;
 }
 
-.card-header button{
+.card-header button {
     background: #248277;
     border-radius: 10px;
     color: #fff;
