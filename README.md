@@ -67,7 +67,6 @@ THEN I will see the waste cost percentage
 
 
 ## Credits
-* Completed by:
  * [Lisa Le]( https://github.com/lisahuele)
  * [Kirti Patel]( https://github.com/kirti18patel)
  * [Scott Percy](https://github.com/sdpercy)
