@@ -15,9 +15,9 @@ A product waste managing web application which allows business owners to manage 
 
 
 ## Installation
-First, the user must clone the repository from GitHub. Once cloned, the user will open their terminal and `npm install` the dependencies as found in the package.json file (dotenv, express, mysql2, and sequelize). The user will also be required to create an .env file to hide their password.
+This application can be accessed using the deployed Heroku url as found [below]( https://waste-management-project2.herokuapp.com/)
 
-To connect to the database, the user will run `mysql -u root -p`, then they must ensure the schema.sql file is sourced by running `source db/schema.sql`. Next, the user will quit mysql and open the terminal again. Then seed the file by running `npm run seed` and to connect to the server run `npm start`. From there, the user can test routes with Insomnia Core if they desire to do so.
+To connect to the application on their local host address, the user must clone the repository from GitHub. Once cloned, the user will open their terminal and `npm install` the dependencies as found in the package.json file (dotenv, express, mysql2, and sequelize). The user will also be required to create an .env file to hide their password. They must then connect to the server by running `npm start`. From there, the user can test routes with Insomnia Core if they desire to do so.
 
 ## License
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
