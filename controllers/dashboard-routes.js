@@ -19,7 +19,8 @@ router.get('/', withAuth, (req, res) => {
           res.status(500).json(err);
         });
   });
-  
+
+
   router.get('/edit/:id', withAuth, (req, res) => {
     Product.findByPk(req.params.id, {
       attributes: [

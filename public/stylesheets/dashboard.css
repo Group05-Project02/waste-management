@@ -166,7 +166,7 @@
     margin-left: 10px;
 
   
-    /* Position the tooltip */
+/* Position the tooltip */
     position: absolute;
     z-index: 1;
 }
@@ -180,65 +180,74 @@
     display: grid;
     grid-gap: 2rem;
     grid-template-columns: 65% auto;
-  }
-  .card{
+}
+
+.card {
     background: #fff;
     border-radius: 12px;
-  }
-  .card-header
-  {
+}
+
+.card-header {
     padding: 1rem;
-  }
-  .card-header{
+}
+
+.card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #f0f0f0;
-  }
-  .card-header button{
-    background: var(--main-color);
+}
+
+.card-header button{
+    background: #248277;
     border-radius: 10px;
     color: #fff;
     font-size: .8rem;
     padding: .5rem 1rem;
-    border:1px solid var(--main-color);
-  }
-  table{
+    border:1px solid #248277;
+}
+
+table {
     border-collapse: collapse;
-  }
-  thead tr{
+}
+
+thead tr {
     border-top: 1px solid #f0f0f0;
     border-bottom:2px solid #f0f0f0;
-  
-  }
-  thead td{
+
+}
+
+thead td {
     font-weight: 700;
-  }
-  td{
+}
+
+td {
     padding: .5rem 1rem ;
     font-size: .9rem ;
     color: #222;
-    
-  }
-  tr td:last-child{
+}
+
+tr td:last-child{
     display: flex;
     align-items: center;
-  
-  
-  }
-  td .status{
+}
+
+td .status {
     display: inline-block;
     height: 10px;
     width: 10px;
     border-radius: 50%;
     margin-right: 1rem; 
-  }
-  .status.red {
+}
+
+.status.red {
     background: red;
-  }
-  .status.orange{
+}
+
+.status.orange {
     background: orange;
-  }
-  .status.green{
+}
+
+.status.green {
     background: green;
-  }
+}

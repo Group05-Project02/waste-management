@@ -5,7 +5,7 @@
             <div class="header-menu">
                 <div class="title logo">
                     <a class="navbar-brand" href="index.html">
-                        <img src="public/images/logo.png" alt="logo">
+                        <img src="/images/logo.png"" alt="logo">
                         Waste Management
                     </a>
                 </div>
@@ -23,8 +23,8 @@
                     <i class="fas fa-cog"></i><span>Inventory <i class="fas fa-chevron-down drop-down"></i></span>
                 </a>
                 <div class="sub-menu">
-                    <a href="#" id="overview-focus"><i class="fas fa-overview-card"></i><span>Overview</span></a>
-                    <a href="#" id="management-focus"><i class="fas fa-overview-card"></i><span>Inventory Management</span></a>
+                    <a href="/overview" id="overview-focus"><i class="fas fa-overview-card"></i><span>Overview</span></a>
+                    <a href="/add" id="management-focus"><i class="fas fa-overview-card"></i><span>Inventory Management</span></a>
                 </div>
             </li>
         </div>
@@ -51,7 +51,7 @@
                 <div class="cards">
                     <div class="card-single">
                         <div>
-                            <h1>$0</h1>
+                            <h1>${{totalCost products}}</h1>
                             <span class="tooltip">ICC
                                 <span class="tooltiptext">Inventory Carrying Cost</span>
                             </span>
@@ -64,18 +64,8 @@
 
                     <div class="card-single">
                         <div>
-                            <h1>$0</h1>
-                            <span>Purchase</span>
-                        </div>
-                        <div>
-                            <span class="fas fa-dolly-flatbed"></span>
-                        </div>
-                    </div>
-
-                    <div class="card-single">
-                        <div>
-                            <h1>$0</h1>
-                            <span>Waste $</span>
+                            <h1>${{wasteCost products}}</h1>
+                            <span>Waste Cost $</span>
                         </div>
                         <div>
                             <span class="fas fa-shopping-basket"></span>
@@ -84,8 +74,8 @@
 
                     <div class="card-single">
                         <div>
-                            <h1>0%</h1>
-                            <span>Waste %</span>
+                            <h1>{{wasteQuantityPercentage products}}%</h1>
+                            <span>Waste Quantity %</span>
                         </div>
                         <div>
                             <span class="fas fa-trash"></span>
@@ -103,14 +93,15 @@
                         <div class="card-body">
                           <div class="table-responsive">
                             <table width="100%">
+                               
                             <thead>
-                              <tr>
-                                <td>Week #</td>
-                                <td>Date Complete</td>
-                                <td>Status</td>
-          
-                              </tr>
+                                <tr>
+                                    <td>Week #</td>
+                                    <td>Date Complete</td>
+                                    <td>Status</td>
+                                </tr>
                             </thead>
+
                             <tbody>
                               <tr>
                                 <td>05</td>
@@ -165,8 +156,8 @@
         </div> <!--main container end-->
     </div> <!--sidebar end-->
 </div> <!--end of .wrapper-->
-{{> products products}}
-    
+
+ 
 
 <script type="text/javascript">
 $(document).ready(function(){
