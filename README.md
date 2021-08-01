@@ -20,9 +20,8 @@ First, the user must clone the repository from GitHub. Once cloned, the user wil
 To connect to the database, the user will run `mysql -u root -p`, then they must ensure the schema.sql file is sourced by running `source db/schema.sql`. Next, the user will quit mysql and open the terminal again. Then seed the file by running `npm run seed` and to connect to the server run `npm start`. From there, the user can test routes with Insomnia Core if they desire to do so.
 
 ## License
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-[MIT License](https://choosealicense.com/licenses/mit/)    
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+[ISC License](https://www.isc.org/licenses/)
 
 
 ## Usage
