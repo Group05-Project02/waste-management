@@ -76,4 +76,3 @@ Created By:
  * [Kirti Patel]( https://github.com/kirti18patel)
  * [Scott Percy](https://github.com/sdpercy)
  * [Amna Syeda](https://github.com/amnasyeda)
-![image](https://user-images.githubusercontent.com/81194686/127756891-01397ddd-2282-43ad-9ac6-3c796aeae6d8.png)
