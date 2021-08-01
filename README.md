@@ -27,7 +27,11 @@ To connect to the database, the user will run `mysql -u root -p`, then they must
 
 ## Usage
 The application allows the user to store, access, and save quantitative data regarding their product expenses. Business owners can track their restaurant’s inventory with business-specific accounting which ultimately improves the order accuracy and streamline of their budget.  
-![screenshotHere]
+
+
+https://user-images.githubusercontent.com/81194686/127756678-f213045f-3b83-4626-a4b5-444ff4f7287f.mov
+
+
 
 
 ## Guidelines 
