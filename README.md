@@ -1,4 +1,4 @@
-# UofT Bootcamp Group 5 Project 2: WasteAway
+# UofT Bootcamp Project 2 Group 5: WasteAway
 ## A fast and accurate waste management system for all your business needs
 
 ## Description: 
