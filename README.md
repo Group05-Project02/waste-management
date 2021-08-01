@@ -1,8 +1,8 @@
-# UofT Bootcamp Group 5 Project 2: WasteAway:
+# UofT Bootcamp Group 5 Project 2: WasteAway
 ## A fast and accurate waste management system for all your business needs
 
 ## Description: 
-A product waste managing web application which allows business owners to manage their kitchen waste in order to lower their overhead costs and also decrease their carbon footprint 
+A product waste managing web application which allows business owners to manage their kitchen waste in order to lower their overhead costs and also decrease their carbon footprint.
 
 ## Table of Contents
 * [Installation](#installation)
