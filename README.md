@@ -1,3 +1,4 @@
+
 # UofT Bootcamp Project 2 Group 5: WasteAway
 ## A fast and accurate waste management system for all your business needs
 
@@ -75,3 +76,4 @@ Created By:
  * [Kirti Patel]( https://github.com/kirti18patel)
  * [Scott Percy](https://github.com/sdpercy)
  * [Amna Syeda](https://github.com/amnasyeda)
+
