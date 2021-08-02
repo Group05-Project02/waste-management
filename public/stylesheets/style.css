@@ -546,7 +546,7 @@ p.check-mark label {
 
 
 /*--------------- HER0 SECTION ---------------*/
-main {
+.main-hero {
     margin-top: 10vh;
     flex: 1 0 auto;
     padding: 0 10%;
