@@ -25,7 +25,7 @@ Products.init(
       },
       // define an price column
       price: {
-        type: DataTypes.DECIMAL,
+        type: DataTypes.DECIMAL(5,2),
         allowNull: false
       },
       // define a quantity column

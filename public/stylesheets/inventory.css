@@ -73,6 +73,12 @@ td label {
     width: 5vw;
 }
 
+.inv-container {
+    display: flex;
+    flex-direction: column;
+    padding: 5vh;
+}
+
 /* ------- Management ----------*/
 .filter-container {
     display: flex;
@@ -156,10 +162,6 @@ td label {
     background-color: #F3F6FA;
 }
 
-#productOverview tr:hover {
-    background-color: #ddd;
-}
-
 #productOverview th {
     text-align: left;
     background-color: #469D89;
@@ -176,3 +178,24 @@ td label {
     column-width: 500px;
 }
 
+.overview-sum {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 5em;
+}
+
+.fa-minus-circle {
+    color: #F25C54;
+    opacity: 50%;
+}
+
+.fa-minus-circle:hover {
+    opacity: 100%;
+}
+
+.add-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+}
