@@ -72,8 +72,8 @@ THEN I will see the waste cost percentage
 
 ## Credits
 Created By:
- * [Lisa Le]( https://github.com/lisahuele)
- * [Kirti Patel]( https://github.com/kirti18patel)
+ * [Lisa Le](https://github.com/lisahuele)
+ * [Kirti Patel](https://github.com/kirti18patel)
  * [Scott Percy](https://github.com/sdpercy)
  * [Amna Syeda](https://github.com/amnasyeda)
 
